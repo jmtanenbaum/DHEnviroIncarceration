@@ -26,7 +26,11 @@ Web mapping as a methodology of inquiry is useful for this project as it allows 
 | 3   | Select data, solidify scope, consult with Data Librarian on data usage |
 | 4 | Geocode jail data, combine data sets using OpenRefine |
 | 5 |  |
-| 6 |
+| 6 |  |
+| 7 |  |
+| 8 |  |
+| 9 |  |
+| 10 |  |
 
 # Technical Scope
 Technologies that will be used include:  
