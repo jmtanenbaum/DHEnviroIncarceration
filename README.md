@@ -41,6 +41,10 @@ Abolitionist geographer Ruth Wilson Gilmore reminds us that prisons are forgotte
 
 # Technical Scope
 Technologies that will be used include:  
- - HTML will establish the basic text and structure of the website
+HTML will establish the basic text and structure of the website, while CSS will elevate the web design, and Javascript will stylize the website design and boost interactivity
+We will use open refine for data cleaning, and geo.py for geocoding any data without clear latitude and longitudes.
+Leaflet will provide us with an opensource map technology foundation. The data from incarceration trends and Reuters is in csv format, and can be imported into leaflet using javascript. We will use the leaflet shapefile plugin here to import the California Environmental Screen data. From there, we will need javascript and html to edit the map. 
+Github pages will host our website and we will also use git to track changes and work as a group. 
+
 
 # Geographic Scope
