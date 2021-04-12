@@ -47,4 +47,5 @@ Leaflet will provide us with an opensource map technology foundation. The data f
 Github pages will host our website and we will also use git to track changes and work as a group. 
 
 
-# Geographic Scope
+# Data: 
+Our data sets include the Vera Institute’s jail and prison population data, narrowed to counties and jurisdictions in California from 2012 after the Brown v. Plata decision forced the state to reduce the prison population, Reuters 2019 data about deaths in jails and prisons, and the 2018 Cal Enviro Screen dataset which includes numerous measures tracking air pollution, water pollution, and environmental toxicity. 
