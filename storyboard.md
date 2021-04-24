@@ -4,7 +4,7 @@
 ## Hannah's Mindmap
 ![mapping3](https://user-images.githubusercontent.com/81589361/115942230-0f916500-a45e-11eb-8144-766bfd7f9327.jpg)
 <div>
-Julia: I love the idea of the polygons and pins. The colors coulldd be useful as well. 
+Julia: I love the idea of the polygons and pins. The colors could be useful as well. 
 
 ## Julia's Mindmap
 ![wireframe (1)](https://user-images.githubusercontent.com/63215658/115942131-8843f180-a45d-11eb-8a2f-142fe4993b9d.png)
