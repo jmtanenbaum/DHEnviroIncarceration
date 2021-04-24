@@ -1,6 +1,8 @@
 # Mindmaps
 ## Lisa's Mindmap
 ![Lisa_Mindmap](https://user-images.githubusercontent.com/81833154/115942941-d65af400-a461-11eb-9c87-3c8fe73a5f0e.jpg)
+<div>
+  I love the layers and interactive elements. There is a wikipedia plugin for leaflet. 
 
 ## Hannah's Mindmap
 ![mapping3](https://user-images.githubusercontent.com/81589361/115942230-0f916500-a45e-11eb-8144-766bfd7f9327.jpg)
@@ -12,7 +14,8 @@
 
 ## Lisa's Crazy 8s
 ![Lisa_crazy8s](https://user-images.githubusercontent.com/81833154/115942922-b1ff1780-a461-11eb-957c-5e8288c06203.jpg)
-
+<div>
+  This is incredible! I love the different ways of vizualizing the data with markers, the sidebar, and the layers.
 
 ## Hannah's Crazy 8s
 ![mapping1](https://user-images.githubusercontent.com/81589361/115942258-32237e00-a45e-11eb-8c77-029281fac731.jpg)
