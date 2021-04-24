@@ -3,7 +3,8 @@
 
 ## Hannah's Mindmap
 ![mapping3](https://user-images.githubusercontent.com/81589361/115942230-0f916500-a45e-11eb-8144-766bfd7f9327.jpg)
-Julia: I love the idea of thhe polygons and pins. The colors coulldd be useful as well. 
+<div>
+Julia: I love the idea of the polygons and pins. The colors coulldd be useful as well. 
 
 ## Julia's Mindmap
 ![wireframe (1)](https://user-images.githubusercontent.com/63215658/115942131-8843f180-a45d-11eb-8a2f-142fe4993b9d.png)
@@ -17,6 +18,7 @@ Julia: I love the idea of thhe polygons and pins. The colors coulldd be useful a
 ## Hannah's Crazy 8s
 ![mapping1](https://user-images.githubusercontent.com/81589361/115942258-32237e00-a45e-11eb-8c77-029281fac731.jpg)
 ![mapping2](https://user-images.githubusercontent.com/81589361/115942261-3780c880-a45e-11eb-9ee4-ba0478ffcd38.jpg)
+<div>
 I like the idea of different icons for prisons and jails and the layers for different enviornmental data. 
 
 ## Julia's Crazy 8s
