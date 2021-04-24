@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2021-04-24T02:17:19.378Z" agent="5.0 (Macintosh)" etag="2JLp51uXMdu0s0uC5nPv" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-24T02:20:10.650Z" agent="5.0 (Macintosh)" etag="JssrMybgAM5IiV3bjgm8" version="14.6.6" type="github">
   <diagram id="w66vDJW3ruG4OLtQ7pGT" name="Page-1">
     <mxGraphModel dx="1123" dy="755" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="B49bELOLRH9yPmZOzdUT-65" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=10;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="370" y="700" width="170" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="B49bELOLRH9yPmZOzdUT-54" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=9;fillColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="520" y="60" width="120" height="80" as="geometry" />
         </mxCell>
@@ -170,6 +173,30 @@
         </mxCell>
         <mxCell id="B49bELOLRH9yPmZOzdUT-57" value="The popups associated with a Featured Story also function as a link to the web page with the featured stories" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="700" y="70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-58" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/uidesignicons/pointer.png;fontSize=10;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="726.76" y="277" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-59" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/uidesignicons/pointer.png;fontSize=10;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="96" y="570" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-60" value="" style="endArrow=classic;html=1;fontSize=10;strokeWidth=4;fillColor=#ffffff;entryX=0;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="B49bELOLRH9yPmZOzdUT-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="560" as="sourcePoint" />
+            <mxPoint x="100" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-61" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=10;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="10" y="457.5" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-62" value="Website name doubles as home page link" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="26" y="465" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-64" value="" style="shape=ellipse;fillColor=#e51400;strokeColor=#B20000;html=1;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="710" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="B49bELOLRH9yPmZOzdUT-66" value="Dots are prison locations" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="710" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
