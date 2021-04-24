@@ -4,7 +4,7 @@
 ## Hannah's Mindmap
 
 ## Julia's Mindmap
-![Untitled design (1)](https://user-images.githubusercontent.com/63215658/115942112-73fff480-a45d-11eb-8bdb-ac0a191e06f8.jpg)
+![wireframe (1)](https://user-images.githubusercontent.com/63215658/115942131-8843f180-a45d-11eb-8a2f-142fe4993b9d.png)
 
 # Crazy 8s 
 
