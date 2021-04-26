@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/papaparse.min.js"></script>
+	<title>World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="header">
+		Mapping Covid Behind Bars
+	</div>
+	<div class="sidebar">
+		<p> COVID-19 and state medical neglect have ravaged prisons and jails across the country. This map of the COVID-19 epidemic in prisons, jails, and detention centers in the U.S illustrates the tragic death toll in the overpopulated U.S carceral system. Mouse over the name of the facility to zoom in and click the icon to view the toll of the epidemic there.</p>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="footer">
+		Source: <a href="https://docs.google.com/spreadsheets/d/1X6uJkXXS-O6eePLxw2e4JeRtM41uPZ2eRcOA_HkPVTk/edit#gid=1197647409"></a>UCLA Prison Law Project COVID Behind Bars'</a>
+	</div>
+
+	<script src="js/map.js"></script>
+
+</body>
+</html>
