@@ -689,13 +689,15 @@ a {
   transition: color 0.6s;
 }
 .cid-svJ9wbrhsb {
-  padding-top: 135px;
-  padding-bottom: 90px;
-  background-image: url("../../../assets/images/mbr.jpg");
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #000000;
 }
 .cid-svJbK73zle {
   z-index: 1000;
   width: 100%;
+  position: relative;
+  min-height: 60px;
 }
 .cid-svJbK73zle nav.navbar {
   position: fixed;
@@ -795,7 +797,8 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 .cid-svJbK73zle .navbar.opened {
   transition: all 0.3s;
@@ -1040,7 +1043,7 @@ a {
 .cid-svJbeomf79 {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #ffffff;
+  background-image: url("../../../assets/images/mbr.jpg");
 }
 .cid-svJbeomf79 img,
 .cid-svJbeomf79 .item-img {
@@ -1064,18 +1067,12 @@ a {
 }
 @media (min-width: 992px) {
   .cid-svJbeomf79 .item-wrapper .item-content {
-    padding: 2rem 2rem 0;
-  }
-  .cid-svJbeomf79 .item-wrapper .item-footer {
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
 }
 @media (max-width: 991px) {
   .cid-svJbeomf79 .item-wrapper .item-content {
-    padding: 1rem 1rem 0;
-  }
-  .cid-svJbeomf79 .item-wrapper .item-footer {
-    padding: 0 1rem 1rem;
+    padding: 1rem;
   }
 }
 .cid-svJbeomf79 .mbr-section-btn {
@@ -1097,6 +1094,8 @@ a {
 .cid-svJbK73zle {
   z-index: 1000;
   width: 100%;
+  position: relative;
+  min-height: 60px;
 }
 .cid-svJbK73zle nav.navbar {
   position: fixed;
@@ -1196,7 +1195,8 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 .cid-svJbK73zle .navbar.opened {
   transition: all 0.3s;
@@ -1437,4 +1437,9 @@ a {
     max-width: calc(100% + 2rem);
     left: -1rem;
   }
+}
+.cid-svJxAizGXG {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
 }
