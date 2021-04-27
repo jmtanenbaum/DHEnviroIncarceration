@@ -688,19 +688,8 @@ body {
 a {
   transition: color 0.6s;
 }
-.cid-svJ9wbrhsb {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: #000000;
-}
-.cid-svJbK73zle {
-  z-index: 1000;
-  width: 100%;
-  position: relative;
-  min-height: 60px;
-}
-.cid-svJbK73zle nav.navbar {
-  position: fixed;
+.cid-svJbK73zle .navbar-dropdown {
+  position: relative !important;
 }
 .cid-svJbK73zle .dropdown-item:before {
   font-family: Moririse2 !important;
@@ -821,6 +810,11 @@ a {
 }
 .cid-svJbK73zle .navbar.collapsed.opened .dropdown-menu {
   top: 0;
+}
+@media (min-width: 992px) {
+  .cid-svJbK73zle .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(98.5vh - 3rem);
+  }
 }
 .cid-svJbK73zle .navbar.collapsed .dropdown-menu .dropdown-submenu {
   left: 0 !important;
@@ -1011,7 +1005,6 @@ a {
 }
 .cid-svJbK73zle .navbar-dropdown {
   padding: 0 1rem;
-  position: fixed;
 }
 .cid-svJbK73zle a.nav-link {
   display: flex;
@@ -1039,6 +1032,11 @@ a {
     max-width: calc(100% + 2rem);
     left: -1rem;
   }
+}
+.cid-svOJSZJdaP {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #242930;
 }
 .cid-svJbeomf79 {
   padding-top: 6rem;
@@ -1091,14 +1089,8 @@ a {
 .cid-svJbeomf79 .item-subtitle {
   text-align: left;
 }
-.cid-svJbK73zle {
-  z-index: 1000;
-  width: 100%;
-  position: relative;
-  min-height: 60px;
-}
-.cid-svJbK73zle nav.navbar {
-  position: fixed;
+.cid-svJbK73zle .navbar-dropdown {
+  position: relative !important;
 }
 .cid-svJbK73zle .dropdown-item:before {
   font-family: Moririse2 !important;
@@ -1219,6 +1211,11 @@ a {
 }
 .cid-svJbK73zle .navbar.collapsed.opened .dropdown-menu {
   top: 0;
+}
+@media (min-width: 992px) {
+  .cid-svJbK73zle .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(98.5vh - 3rem);
+  }
 }
 .cid-svJbK73zle .navbar.collapsed .dropdown-menu .dropdown-submenu {
   left: 0 !important;
@@ -1409,7 +1406,6 @@ a {
 }
 .cid-svJbK73zle .navbar-dropdown {
   padding: 0 1rem;
-  position: fixed;
 }
 .cid-svJbK73zle a.nav-link {
   display: flex;
