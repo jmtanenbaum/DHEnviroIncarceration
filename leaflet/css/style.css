@@ -1,5 +1,5 @@
 body,html {
-	margin:0;
+	margin:10;
 	height:100%;
 	width:100%;
 }
@@ -10,21 +10,12 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 80px 1fr;
+	grid-template-rows: 800px 1fr;
 	grid-template-columns: 350px 1fr;
 	grid-template-areas: 
-	"header header"
 	"sidebar content"
-	"footer footer";
 }
 
-.header {
-	grid-area: header;
-	padding:10px;
-	background-color: #333;
-	color: white;
-	font-size: 2em;
-}
 
 .sidebar {
 	color: white;
@@ -36,10 +27,4 @@ body {
 
 .content {
 	grid-area: content;
-}
-
-.footer {
-	grid-area: footer;
-	padding:10px;
-	background-color: rgb(175, 175, 175);
 }
