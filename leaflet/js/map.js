@@ -62,7 +62,7 @@ function mapCSV(data){
 	// circle options
 	let marker = L.circleMarker([item.Latitude,item.Longtitude],circleOptions)
 	.on('mouseover',function(){
-		this.bindPopup(`${item['County / Name of Facility']} <div> Prison Population: ${item["Resident Population (On February 1st, 2020)"]}`).openPopup()
+		this.bindPopup(`${item['County / Name of Facility']} <br> Prison Population: ${item['Resident Population (On February 1st, 2020)']}`).openPopup()
 	})
 
 	// add marker to featuregroup
