@@ -69,7 +69,7 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 function panToImage(index){
-	map.setZoom(17);
+	map.setZoom(5);
 	// pan to the marker
 	map.panTo(markers.getLayers()[index]._latlng);
 	map.openPopup(marker)
