@@ -50,12 +50,10 @@ function mapCSV(data){
 	// loop through each entry
 	data.data.forEach(function(item,index){
 		// create a marker
-		let marker = L.circleMarker([item.lat,item.lon],circleOptions)
+		let marker = L.circleMarker([item.Latitude,item.Longtitude],circleOptions)
 		.on('mouseover',function(){
-			this.bindPopup(`Facility name: ${item.name} <div> Prisoner Covid-19 cases: ${item.cases}<div>Prisoner deaths: ${item.deaths}<div>Incarcerated Population: ${item.pop}<div> Staff Covid-19 cases: ${item.staffcases} <div> Staff deaths: ${item.staffdeaths}`).openPopup()
+			this.bindPopup(`Facility name: ${item["County / Name of Facility"} <div> Prison Population: ${item["Resident Population (On February 1st, 2020)"]}`).openPopup()
 		})
-			// add entry to sidebar
-        $('.sidebar').append(`<div onmousemove="panToImage(${index})"><br>${item.name}<br><br></div>`)
 		
 		// add marker to featuregroup
 			markers.addLayer(marker)
