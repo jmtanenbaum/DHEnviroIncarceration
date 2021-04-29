@@ -29,12 +29,11 @@ function readCSV(path){
 		download: true,
 		complete: function(data) {
 			console.log(data);
-			
-			// put data in a global variable
-			prisondata = date;
-			
-			//call map
-			mapCSV();
+						
+			prisondata = data;
+
+            //call map
+			mapCSV(data);
 
 		}
 	});
@@ -45,30 +44,28 @@ function mapCSV(data){
 	//clear layers in case calling more than once
 	markers.clearLayers();
 	
-	//loop
-	prisondata.data.forEach(function(item,index){
-		if(item.Latitude != undefined){
-	
-
 	// circle options
 	let circleOptions = {
-		radius: 3,
+		radius: 4,
 		weight: 1,
 		color: 'white',
 		fillColor: 'red',
 		fillOpacity: 1
 	}
-
-	// circle options
-	let marker = L.circleMarker([item.Latitude,item.Longtitude],circleOptions)
+    //loop
+    prisondata.data.forEach(function(item,index){
+        
+	// marker create
+	let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
 	.on('mouseover',function(){
-		this.bindPopup(`${item['County / Name of Facility']} <br> Prison Population: ${item['Resident Population (On February 1st, 2020)']}`).openPopup()
+		this.bindPopup(`${item['County / Name of Facility']} <br> Prison Population:
+         ${item['Resident Population (On February 1st, 2020)']}`).openPopup()
 	})
 
 	// add marker to featuregroup
 	markers.addLayer(marker)
 
-	})
+    })
 
 	// add featuregroup to map
 	markers.addTo(map)
@@ -78,7 +75,7 @@ function mapCSV(data){
 }
 
 function panToImage(index){
-	map.setZoom(5);
+	map.setZoom(4);
 	// pan to the marker
 	map.panTo(markers.getLayers()[index]._latlng);
 	map.openPopup(marker)
