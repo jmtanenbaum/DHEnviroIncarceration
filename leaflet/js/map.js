@@ -5,6 +5,7 @@ let lon = 0;
 let zl = 3;
 let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTgNZp9-3pcJakjqoT6mDbsF4wL-wb2qRCMsx0jT-1vqtP7PKy6p_oXJNqtA4k/pub?gid=0&single=true&output=csv";
 let markers = L.featureGroup();
+let prisondata;
 
 // initialize
 $( document ).ready(function() {
@@ -29,14 +30,25 @@ function readCSV(path){
 		complete: function(data) {
 			console.log(data);
 			
-			// map the data
-			mapCSV(data);
+			// put data in a global variable
+			prisondata = date;
+			
+			//call map
+			mapCSV();
 
 		}
 	});
 }
 
 function mapCSV(data){
+	
+	//clear layers in case calling more than once
+	markers.clearLayers();
+	
+	//loop
+	prisondata.data.forEach(function(item,index){
+		if(item.Latitude != undefined){
+	
 
 	// circle options
 	let circleOptions = {
@@ -47,16 +59,14 @@ function mapCSV(data){
 		fillOpacity: 1
 	}
 
-	// loop through each entry
-	data.data.forEach(function(item,index){
-		// create a marker
-		let marker = L.circleMarker([item.Latitude,item.Longtitude],circleOptions)
-		.on('mouseover',function(){
-			this.bindPopup(`Facility name: ${item["County / Name of Facility"} <div> Prison Population: ${item["Resident Population (On February 1st, 2020)"]}`).openPopup()
-		})
-		
-		// add marker to featuregroup
-			markers.addLayer(marker)
+	// circle options
+	let marker = L.circleMarker([item.Latitude,item.Longtitude],circleOptions)
+	.on('mouseover',function(){
+		this.bindPopup(`${item['County / Name of Facility']} <div> Prison Population: ${item["Resident Population (On February 1st, 2020)"]}`).openPopup()
+	})
+
+	// add marker to featuregroup
+	markers.addLayer(marker)
 
 	})
 
@@ -67,3 +77,9 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds())
 }
 
+function panToImage(index){
+	map.setZoom(5);
+	// pan to the marker
+	map.panTo(markers.getLayers()[index]._latlng);
+	map.openPopup(marker)
+}
