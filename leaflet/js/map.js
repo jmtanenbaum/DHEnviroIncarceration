@@ -3,7 +3,7 @@ let map;
 let lat = 0;
 let lon = 0;
 let zl = 3;
-let path = "data/covid.csv";
+let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTgNZp9-3pcJakjqoT6mDbsF4wL-wb2qRCMsx0jT-1vqtP7PKy6p_oXJNqtA4k/pub?gid=0&single=true&output=csv";
 let markers = L.featureGroup();
 
 // initialize
