@@ -9,14 +9,16 @@ let markers = L.featureGroup();
 let prisondata;
 //create layergroups
 let prisonMarkers = L.layerGroup();
-let enviroPolys;
+let pollPolys;
+let gwPolys;
+let hazPolys;
 
 //Shape Style Test Code 
-var myStyle = {
-    "color": "#ff7800",
-    "weight": 1,
-    "opacity": 0.65
-};
+// var myStyle = {
+//     "color": "#ff7800",
+//     "weight": 1,
+//     "opacity": 0.65
+// };
 
 // initialize
 $( document ).ready(function() {
@@ -57,15 +59,31 @@ function shapesLoaded() {
 	//when file is ready, read it 
 	if (this.readyState == 4 && this.status == "200") { //check file is good 
 		enviroShape = JSON.parse(this.responseText); //convert file into js
-
-		enviroPolys = L.geoJSON(enviroShape,{
-			style: myStyle
+		
+		//add Haz Waste poly layer 
+		hazPolys = L.geoJSON(enviroShape,{
+			style: colorEnviroHazMat
 		})
-		enviroPolys.addTo(map);	//apply style settings and add shapes to map
+		hazPolys.addTo(map);	//apply style settings and add shapes to map
+
+		//add Groundwater Threat poly layer
+		gwPolys = L.geoJSON(enviroShape,{
+			style: colorEnviroGW
+		})
+		gwPolys.addTo(map);
+
+		//add Pollution poly layer
+		pollPolys = L.geoJSON(enviroShape,{
+			style: colorEnviroPollu
+		})
+		pollPolys.addTo(map);
+		
 		//create layers
 		let layers = {
 			"Prison Locations": prisonMarkers,
-			"Environmental Risks": enviroPolys
+			"Hazardous Wastes": hazPolys, 
+			"Groundwater Threats": gwPolys,
+			"Pollution": pollPolys
 		}
 
 		//layer controls
@@ -76,6 +94,98 @@ function shapesLoaded() {
 
 	}
 }
+
+//return color based on percent of Hazardous Wastes 
+function colorEnviroHazMat(poly) {
+	//poly is the enviro poly loaded above.
+	var Haz_pctl = poly.properties.Haz_pctl
+	if ( Haz_pctl > 74.99) {
+		return {color: "#fabc05",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 74.99 >= Haz_pctl > 49.99) {
+		return {color: "#fbf500",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 49.99 >= Haz_pctl > 24.99) {
+		return {color: "#fffd3d",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( Haz_pctl <= 24.99 ) {
+		return {color: "#edff5f",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else {
+		return {
+			opacity: 0
+		}
+	}
+}
+
+//return color based on percent of Groundwater Threats 
+function colorEnviroGW(poly) {
+	var GW_pctl = poly.properties.GW_pctl
+	if ( GW_pctl > 74.99) {
+		return {color: "#0014ff",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 74.99 >= GW_pctl > 49.99) {
+		return {color: "#2d3dff",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 49.99 >= GW_pctl > 24.99) {
+		return {color: "#5b67ff",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( GW_pctl <= 24.99 ) {
+		return {color: "#7681ff",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else {
+		return {
+			opacity: 0
+		}
+	}
+}
+
+//return color based on Pollution percentiles 
+function colorEnviroPollu(poly) {
+	var Poll_pctl = poly.properties.Poll_pctl
+	if ( Poll_pctl > 74.99) { 
+		return {color: "#ff3100",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 74.99 >= Poll_pctl > 49.99) {
+		return {color: "#ff4e25",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( 49.99 >= Poll_pctl > 24.99) {
+		return {color: "##ff7454",
+				weight: "1",
+				fillOpacity: 0.65}
+	}
+	else if ( Poll_pctl <= 24.99 ) {
+		return {color: "#ffa793",
+				weight: "1",
+				fillOpacity: 0.65}	
+	}
+	else {
+		return {
+			opacity: 0
+		}
+	}
+}
+
 
 //function to read json data from html
 function loadJSONFile() {   
@@ -123,7 +233,7 @@ function mapCSV(data){
 
 	// add featuregroup to map
 	// markers.addTo(map)
-	
+
 	// fit map to markers 
 	map.fitBounds(markers.getBounds())	
 }
