@@ -13,13 +13,6 @@ let pollPolys;
 let gwPolys;
 let hazPolys;
 
-//Shape Style Test Code 
-// var myStyle = {
-//     "color": "#ff7800",
-//     "weight": 1,
-//     "opacity": 0.65
-// };
-
 // initialize
 $( document ).ready(function() {
 	createMap(lat,lon,zl);
