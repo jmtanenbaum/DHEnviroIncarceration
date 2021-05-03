@@ -23,7 +23,7 @@ Lisa (she/her) is a second year Master of Library and Information Sciences stude
 # Overview
 # Our Data Sets
 1. [COVID Behind Bars](https://docs.google.com/spreadsheets/d/1X6uJkXXS-O6eePLxw2e4JeRtM41uPZ2eRcOA_HkPVTk/edit#gid=1197647409)
-  --> [Cleaned data set for California use:] (https://docs.google.com/spreadsheets/d/1c3hDs6m1iY5e3jKKdtiNYBWJbrvAHtZ6615qWFR-MTY/edit#gid=0) 
+  --> [Cleaned data set for California use (https://docs.google.com/spreadsheets/d/1c3hDs6m1iY5e3jKKdtiNYBWJbrvAHtZ6615qWFR-MTY/edit#gid=0)] 
 2. [California Environmental Conditions](https://data.ca.gov/dataset/calenviroscreen-3-0-results)
 
 # Our Plan 
