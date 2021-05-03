@@ -8,7 +8,6 @@ let enviroShapePath = "https://raw.githubusercontent.com/jmtanenbaum/DHEnviroInc
 let markers = L.featureGroup();
 let markersLayer = L.featureGroup();
 let prisondata;
-let prisonpop; //trying to change marker size acc to prison pop size
 //create layergroups
 let prisonMarkers = L.layerGroup();
 let pollPolys;
@@ -41,11 +40,7 @@ function readCSV(path){
 		complete: function(data) {
 			console.log(data);
 						
-			//put data in global variable
 			prisondata = data;
-
-			//get prison population and put in global variable
-			prisonpop = prisondata.meta.fields[prisondata.meta.fields.length-12];
 
             //call map
 			mapCSV(data);
@@ -200,28 +195,27 @@ function loadJSONFile() {
     xmlobj.send();  //sends request
 }
 
-function mapCSV(population){
+function mapCSV(data){
 	
 	//clear layers in case calling more than once
 	markers.clearLayers();
 	
-	//loop
+	// circle options
+	let circleOptions = {
+		radius: 4,
+		weight: 1,
+		color: 'white',
+		fillColor: 'black',
+		fillOpacity: 1
+	}
+    //loop
     prisondata.data.forEach(function(item,index){
-        if(item.Latitude != undefined){
-			// circle options
-			let circleOptions = {
-				radius: getRadiusSize(item[population]),
-				weight: 1,
-				color: 'white',
-				fillColor: 'black',
-				fillOpacity: 1
-			}
-		
+        
 		// marker create
 		let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
 		.on('mouseover',function(){
 			this.bindPopup(`${item['County / Name of Facility']} <br> Prison Population:
-			${population}: ${item['Resident Population (On February 1st, 2020)']}`).openPopup()
+			${item['Resident Population (On February 1st, 2020)']}`).openPopup()
 		})
 
 		// add marker to featuregroup
@@ -238,30 +232,9 @@ function mapCSV(population){
 	map.fitBounds(markers.getBounds())	
 }
 
-//function to adjust radius size of markers according to popsize, doesn't appear to have any impact
-function getRadiusSize(value){
-
-	let values = [];
-
-	// get the min and max
-	prisondata.data.forEach(function(item,index){
-		if(item[prisonpop] != undefined){
-			values.push(Number(item[prisonpop]))
-		}
-	})
-	let min = Math.min(...values);
-	let max = Math.max(...values)
-	
-	// per pixel if 100 pixel is the max range
-	perpixel = max/10;
-	return value/perpixel
-}
-
-
 function panToImage(index){
 	map.setZoom(4);
 	// pan to the marker
 	map.panTo(markers.getLayers()[index]._latlng);
 	map.openPopup(marker)
 }
-
