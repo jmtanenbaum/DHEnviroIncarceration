@@ -55,5 +55,8 @@ We will use open refine for data cleaning.
 Leaflet will provide us with an opensource map technology foundation. The data from incarceration trends and Reuters is in csv format, and can be imported into leaflet using javascript. We will use the leaflet shapefile plugin here to import the California Environmental Screen data. From there, we will need javascript and html to edit the map. 
 Github pages will host our website and we will also use git to track changes and work as a group. 
 
-User Interface Plans:
+User Interface Plans: 
+<br>
+We are using bootstrap for the user interface to create a menu bar and the about page. The map itself contains a html and js based search bar that will allow us to search for a facility and layers for each geojson file of enviornmental hazzards. We will add data for facilities that have been fined by the EPA or are toxic sites based on additional research. 
+<br>
 ![image](https://user-images.githubusercontent.com/63215658/116908164-6e41a600-abf7-11eb-8ad6-d6a05ffeca88.png)
