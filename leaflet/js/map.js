@@ -239,22 +239,22 @@ function panToImage(index){
 	map.openPopup(marker)
 }
 
-//Control Search Bar
-// var controlSearch = new L.Control.Search({
-// 	position:'topright',		
-// 	layer: markersLayer,
-// 	initial: false,
-// 	zoom: 12,
-// 	marker: false
-// });
+// Control Search Bar
+var controlSearch = new L.Control.Search({
+	position:'topright',		
+	layer: markersLayer,
+	initial: false,
+	zoom: 12,
+	marker: false
+});
 
-// map.addControl( controlSearch );
+map.addControl( controlSearch );
 
-////////////populate map with markers from sample data
-// for(i in data) {
-// 	var title = data[i].title,	//value searched
-// 		loc = data[i].loc,		//position found
-// 		marker = new L.Marker(new L.latLng(loc), {title: title} );//se property searched
-// 	marker.bindPopup('title: '+ title );
-// 	markersLayer.addLayer(marker);
-// }
+//////////populate map with markers from sample data
+for(i in data) {
+	var title = data[i].title,	//value searched
+		loc = data[i].loc,		//position found
+		marker = new L.Marker(new L.latLng(loc), {title: title} );//se property searched
+	marker.bindPopup('title: '+ title );
+	markersLayer.addLayer(marker);
+}
