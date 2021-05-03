@@ -35,9 +35,16 @@ body {
     padding:2%;
 }
 
-.search {
-    float:right;
-    margin:7px;
+.search_bar button{
+    background-color: hsl(0, 0%, 27%);
+    color: #f2f2f2;
+    float:none;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border-radius: 10px;
+    border:orange;
+    cursor: pointer;
 }
 
 /* END SEARCH BAR STUFF*/
