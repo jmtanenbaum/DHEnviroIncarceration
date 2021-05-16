@@ -10,7 +10,6 @@ let markersLayer = L.featureGroup();
 let legend = L.control({position: 'bottomright'});
 let prisondata;
 let brew = new classyBrew();
-let fieldToMap; //brew fields
 //create layergroups
 let prisonMarkers = L.layerGroup();
 let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
@@ -23,7 +22,7 @@ $( document ).ready(function() {
 	createMap(lat,lon,zl);
 	readCSV(path);
 	//JSON waits for web
-	//BYPASS FOR NOW loadJSONFile(); 
+	loadJSONFile(); 
 		
 });
 
@@ -57,7 +56,7 @@ function readCSV(path){
 }
 
 //classybrew function
-function refillLayers(field) {
+function refillLayers() {
 	// clear layers in case it has been mapped already
 	if (gwPolys){
 		gwPolys.clearLayers()
@@ -66,14 +65,66 @@ function refillLayers(field) {
 		pollPolys.clearLayers()
 	}
 	
-	// globalize the field to map
-	fieldToMap = field;
-
 	// create an empty array
 	let values = [];
 
 	// based on the provided field, enter each value into the array
-	
+	enviroShape.features.forEach(function(item,index){
+		values.push(item.properties["GW_pctl"])
+	})
+	enviroShape.features.forEach(function(item,index){
+		values.push(item.properties["Poll_pctl"])
+	})
+
+	// set up the "brew" options
+	brew.setSeries(values);
+	brew.setNumClasses(5);
+	brew.setColorCode('YlOrRd');
+	brew.classify('quantiles');
+
+	// create the layer and add to map
+	gwPolys = L.geoJson(enviroShape, {
+		style: gwStyle //call a function to style each feature
+	}).addTo(map);
+
+	pollPolys = L.geoJson(enviroShape, {
+		style: pollStyle //call a function to style each feature
+	}).addTo(map);
+
+	//remove from map
+	toggleLayers.remove();
+
+	//create layers
+	let layers = {
+		"Prison Locations": prisonMarkers, 
+		"Groundwater Threats": gwPolys,
+		"Pollution": pollPolys
+	}
+
+	//layer controls
+	toggleLayers = L.control.layers(null,layers).addTo(map);
+}
+
+function gwStyle(feature){
+	return {
+		stroke: true,
+		color: 'white',
+		weight: 1,
+		fill: true,
+		fillColor: brew.getColorInRange(feature.properties["GW_pctl"]),
+		fillOpacity: 0.8
+	}
+}
+
+function pollStyle(feature){
+	return {
+		stroke: true,
+		color: 'white',
+		weight: 1,
+		fill: true,
+		fillColor: brew.getColorInRange(feature.properties["Poll_pctl"]),
+		fillOpacity: 0.8
+	}
 }
 
 //load up the choropleth layers
@@ -81,94 +132,20 @@ function shapesLoaded() {
 	//when file is ready, read it 
 	if (this.readyState == 4 && this.status == "200") { //check file is good 
 		enviroShape = JSON.parse(this.responseText); //convert file into js
-
-		//add Groundwater Threat poly layer
-		gwPolys = L.geoJSON(enviroShape,{
-			style: colorEnviroGW
-		})
-		gwPolys.addTo(map);
-
-		//add Pollution poly layer
-		pollPolys = L.geoJSON(enviroShape,{
-			style: colorEnviroPollu
-		})
-		pollPolys.addTo(map);
 		
 		//create layers
 		let layers = {
-			"Prison Locations": prisonMarkers, 
-			"Groundwater Threats": gwPolys,
-			"Pollution": pollPolys
 		}
 
 		//layer controls
-		L.control.layers(null,layers).addTo(map)
+		toggleLayers = L.control.layers(null,layers);
+		toggleLayers.addTo(map)
 
 		//add layergroups to map 
 		prisonMarkers.addTo(map)
 
-		refillLayers('')
+		refillLayers()
 
-	}
-}
-
-//return color based on percent of Groundwater Threats 
-function colorEnviroGW(poly) {
-	var GW_pctl = poly.properties.GW_pctl
-	if ( GW_pctl > 74.99) {
-		return {color: "#0014ff",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 74.99 >= GW_pctl > 49.99) {
-		return {color: "#2d3dff",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 49.99 >= GW_pctl > 24.99) {
-		return {color: "#5b67ff",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( GW_pctl <= 24.99 ) {
-		return {color: "#7681ff",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else {
-		return {
-			opacity: 0
-		}
-	}
-}
-
-//return color based on Pollution percentiles 
-function colorEnviroPollu(poly) {
-	var Poll_pctl = poly.properties.Poll_pctl
-	if ( Poll_pctl > 74.99) { 
-		return {color: "#ff3100",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 74.99 >= Poll_pctl > 49.99) {
-		return {color: "#ff4e25",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 49.99 >= Poll_pctl > 24.99) {
-		return {color: "##ff7454",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( Poll_pctl <= 24.99 ) {
-		return {color: "#ffa793",
-				weight: "1",
-				fillOpacity: 0.65}	
-	}
-	else {
-		return {
-			opacity: 0
-		}
 	}
 }
 
