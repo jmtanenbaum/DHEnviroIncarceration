@@ -13,6 +13,7 @@ let brew = new classyBrew();
 let fieldToMap; //brew fields
 //create layergroups
 let prisonMarkers = L.layerGroup();
+let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
 let pollPolys;
 let gwPolys;
 
@@ -22,7 +23,7 @@ $( document ).ready(function() {
 	createMap(lat,lon,zl);
 	readCSV(path);
 	//JSON waits for web
-	loadJSONFile(); 
+	//BYPASS FOR NOW loadJSONFile(); 
 		
 });
 
@@ -45,8 +46,11 @@ function readCSV(path){
 						
 			prisondata = data;
 
+			//get prison population and put in global variable
+			prisonpop = prisondata.meta.fields[prisondata.meta.fields.length-10];
+
             //call map
-			mapCSV(data);
+			mapCSV(prisonpop);
 
 		}
 	});
@@ -207,45 +211,67 @@ function loadJSONFile() {
     xmlobj.send();  //sends request
 }
 
-function mapCSV(data){
-	
-	//clear layers in case calling more than once
-	markers.clearLayers();
-	
-	// circle options
-	let circleOptions = {
-		radius: 4,
-		weight: 1,
-		color: 'white',
-		fillColor: 'black',
-		fillOpacity: 1
-	}
+function mapCSV(pop){ //using pop(ulation) instead of data
+    
+    //clear layers in case calling more than once
+    markers.clearLayers();
+    console.log(prisondata)
     //loop
     prisondata.data.forEach(function(item,index){
+        if(item.Latitude != undefined){
+			console.log('Population')
+            // circle options
+            let circleOptions = {
+                radius:  10,
+				//radius: getRadiusSize(item['Population']),
+                weight: 1,
+                color: 'white',
+                fillColor: 'black',
+                fillOpacity: 0.75
+            }
         
-		// marker create
-		let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
-		.on('mouseover',function(){
-			this.bindPopup(`${item['County / Name of Facility']} <br> Prison Population:
-			${item['Resident Population (On February 1st, 2020)']}`).openPopup()
-		})
+        // marker create
+        let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
+        .on('mouseover',function(){
+            this.bindPopup(`${item['County / Name of Facility']} <br> Prison
+            ${pop}: ${item['Population']}`).openPopup()
+        })
 
-		// add marker to featuregroup
-		markers.addLayer(marker)
-		
-		//add to layergroup
-		prisonMarkers.addLayer(marker)
+        // add marker to featuregroup
+        markers.addLayer(marker)
+        
+        //add to layergroup
+        prisonMarkers.addLayer(marker)
+		}
     }) 
 
-	// create the legend
-	createLegend();
+    // add featuregroup to map
+    markers.addTo(map)
 
-	// add featuregroup to map
-	// markers.addTo(map)
-
-	// fit map to markers 
-	map.fitBounds(markers.getBounds())	
+    // fit map to markers 
+    map.fitBounds(markers.getBounds())  
 }
+
+//function to adjust radius size of markers according to popsize, doesn't appear to have any impact
+function getRadiusSize(value){
+
+    let values = [];
+
+    // get the min and max
+    prisondata.data.forEach(function(item,index){
+        if(item[prisonpop] != undefined){
+            values.push(Number(item[prisonpop]))
+        }
+    })
+    let min = Math.min(...values);
+    let max = Math.max(...values)
+    
+    // per pixel if 100 pixel is the max range
+    perpixel = max/10;
+    return value/perpixel
+}
+
+
 
 function panToImage(index){
 	map.setZoom(4);
