@@ -7,12 +7,15 @@ let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTg
 let enviroShapePath = "https://raw.githubusercontent.com/jmtanenbaum/DHEnviroIncarceration/main/leaflet/data/CES3Results.json";
 let markers = L.featureGroup();
 let markersLayer = L.featureGroup();
+let legend = L.control({position: 'bottomright'});
 let prisondata;
+let brew = new classyBrew();
+let fieldToMap; //brew fields
 //create layergroups
 let prisonMarkers = L.layerGroup();
 let pollPolys;
 let gwPolys;
-let hazPolys;
+
 
 // initialize
 $( document ).ready(function() {
@@ -49,16 +52,31 @@ function readCSV(path){
 	});
 }
 
+//classybrew function
+function refillLayers(field) {
+	// clear layers in case it has been mapped already
+	if (gwPolys){
+		gwPolys.clearLayers()
+	}
+	if (pollPolys){
+		pollPolys.clearLayers()
+	}
+	
+	// globalize the field to map
+	fieldToMap = field;
+
+	// create an empty array
+	let values = [];
+
+	// based on the provided field, enter each value into the array
+	
+}
+
+//load up the choropleth layers
 function shapesLoaded() {
 	//when file is ready, read it 
 	if (this.readyState == 4 && this.status == "200") { //check file is good 
 		enviroShape = JSON.parse(this.responseText); //convert file into js
-		
-		//add Haz Waste poly layer 
-		hazPolys = L.geoJSON(enviroShape,{
-			style: colorEnviroHazMat
-		})
-		hazPolys.addTo(map);	//apply style settings and add shapes to map
 
 		//add Groundwater Threat poly layer
 		gwPolys = L.geoJSON(enviroShape,{
@@ -74,8 +92,7 @@ function shapesLoaded() {
 		
 		//create layers
 		let layers = {
-			"Prison Locations": prisonMarkers,
-			"Hazardous Wastes": hazPolys, 
+			"Prison Locations": prisonMarkers, 
 			"Groundwater Threats": gwPolys,
 			"Pollution": pollPolys
 		}
@@ -86,37 +103,8 @@ function shapesLoaded() {
 		//add layergroups to map 
 		prisonMarkers.addTo(map)
 
-	}
-}
+		refillLayers('')
 
-//return color based on percent of Hazardous Wastes 
-function colorEnviroHazMat(poly) {
-	//poly is the enviro poly loaded above.
-	var Haz_pctl = poly.properties.Haz_pctl
-	if ( Haz_pctl > 74.99) {
-		return {color: "#fabc05",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 74.99 >= Haz_pctl > 49.99) {
-		return {color: "#fbf500",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( 49.99 >= Haz_pctl > 24.99) {
-		return {color: "#fffd3d",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else if ( Haz_pctl <= 24.99 ) {
-		return {color: "#edff5f",
-				weight: "1",
-				fillOpacity: 0.65}
-	}
-	else {
-		return {
-			opacity: 0
-		}
 	}
 }
 
@@ -180,6 +168,30 @@ function colorEnviroPollu(poly) {
 	}
 }
 
+// legend settings
+function createLegend(){
+	legend.onAdd = function (map) {
+		var div = L.DomUtil.create('div', 'info legend'),
+		breaks = brew.getBreaks(),
+		labels = [],
+		from, to;
+		
+		for (var i = 0; i < breaks.length; i++) {
+			from = breaks[i];
+			to = breaks[i + 1];
+			if(to) {
+				labels.push(
+					'<i style="background:' + brew.getColorInRange(from) + '"></i> ' +
+					from.toFixed(2) + ' &ndash; ' + to.toFixed(2));
+				}
+			}
+			
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+		
+		legend.addTo(map);
+}
 
 //function to read json data from html
 function loadJSONFile() {   
@@ -224,6 +236,9 @@ function mapCSV(data){
 		//add to layergroup
 		prisonMarkers.addLayer(marker)
     }) 
+
+	// create the legend
+	createLegend();
 
 	// add featuregroup to map
 	// markers.addTo(map)
