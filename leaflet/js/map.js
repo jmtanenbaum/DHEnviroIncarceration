@@ -85,11 +85,13 @@ function refillLayers() {
 	brew.classify('quantiles');
 
 	// create the layer and add to map
-	gwPolys = L.geoJson(enviroShape, {
+	gwPolys = L.geoJson(enviroShape, {	
+		onEachFeature: onEachFeature,	
 		style: gwStyle //call a function to style each feature
 	}).addTo(map);
 
 	pollPolys = L.geoJson(enviroShape, {
+		onEachFeature: onEachFeature,	
 		style: pollStyle //call a function to style each feature
 	}).addTo(map);
 
