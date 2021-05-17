@@ -90,3 +90,9 @@ body {
 	margin-right: 8px;
 	opacity: 0.7;
 }
+
+.map-item {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #111;
+}

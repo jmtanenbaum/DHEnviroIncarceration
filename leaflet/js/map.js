@@ -7,14 +7,16 @@ let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTg
 let enviroShapePath = "https://raw.githubusercontent.com/jmtanenbaum/DHEnviroIncarceration/main/leaflet/data/CES3Results.json";
 let markers = L.featureGroup();
 let markersLayer = L.featureGroup();
-let legend = L.control({position: 'bottomright'});
+let legend = L.control({position: 'topright'}); //legend object
+let info_panel = L.control();
 let prisondata;
 let brew = new classyBrew();
 //create layergroups
 let prisonMarkers = L.layerGroup();
 let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
-let pollPolys;
-let gwPolys;
+let pollPolys; //pollution polygons
+let gwPolys; //groundwater polygons
+
 
 
 // initialize
@@ -78,7 +80,7 @@ function refillLayers() {
 
 	// set up the "brew" options
 	brew.setSeries(values);
-	brew.setNumClasses(5);
+	brew.setNumClasses(6);
 	brew.setColorCode('YlOrRd');
 	brew.classify('quantiles');
 
@@ -103,12 +105,17 @@ function refillLayers() {
 
 	//layer controls
 	toggleLayers = L.control.layers(null,layers).addTo(map);
+
+	// create the legend
+	createLegend();
+	// create the infopanel
+	createInfoPanel();
+
 }
 
 function gwStyle(feature){
 	return {
 		stroke: true,
-		color: 'white',
 		weight: 1,
 		fill: true,
 		fillColor: brew.getColorInRange(feature.properties["GW_pctl"]),
@@ -119,7 +126,6 @@ function gwStyle(feature){
 function pollStyle(feature){
 	return {
 		stroke: true,
-		color: 'white',
 		weight: 1,
 		fill: true,
 		fillColor: brew.getColorInRange(feature.properties["Poll_pctl"]),
@@ -148,8 +154,7 @@ function shapesLoaded() {
 
 	}
 }
-
-// legend settings
+//create legend
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
@@ -162,7 +167,7 @@ function createLegend(){
 			to = breaks[i + 1];
 			if(to) {
 				labels.push(
-					'<i style="background:' + brew.getColorInRange(from) + '"></i> ' +
+					'<i style="background:' + brew.getColorInRange(to) + '"></i> ' +
 					from.toFixed(2) + ' &ndash; ' + to.toFixed(2));
 				}
 			}
@@ -172,6 +177,73 @@ function createLegend(){
 		};
 		
 		legend.addTo(map);
+}
+
+// Function that defines what will happen on user interactions with each feature
+function onEachFeature(feature, layer) {
+	layer.on({
+		mouseover: highlightFeature,
+		mouseout: resetHighlight,
+		click: zoomToFeature
+	});
+}
+
+// on mouse over, highlight the feature
+function highlightFeature(e) {
+	var layer = e.target;
+
+	// style to use on mouse over
+	layer.setStyle({
+		weight: 2,
+		color: '#666',
+		fillOpacity: 0.7
+	});
+
+	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+		layer.bringToFront();
+	}
+
+	info_panel.update(layer.feature.properties)
+}
+
+// on mouse out, reset the style, otherwise, it will remain highlighted
+function resetHighlight(e) {
+	pollPolys.resetStyle(e.target);
+	info_panel.update() // resets infopanel
+}
+
+function resetHighlight(e) {
+	gwPolys.resetStyle(e.target);
+	info_panel.update() // resets infopanel
+}
+
+// on mouse click on a feature, zoom in to it
+function zoomToFeature(e) {
+	map.fitBounds(e.target.getBounds());
+}
+
+function createInfoPanel(){
+
+	info_panel.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+		this.update();
+		return this._div;
+	};
+
+	// method that we will use to update the control based on feature properties passed
+	info_panel.update = function (properties) {
+		// if feature is highlighted
+		if(properties){
+			this._div.innerHTML = `<b>${properties.name}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+		}
+		// if feature is not highlighted
+		else
+		{
+			this._div.innerHTML = 'Hover over a California environmental tract';
+		}
+	};
+
+	info_panel.addTo(map);
 }
 
 //function to read json data from html
@@ -199,7 +271,7 @@ function mapCSV(pop){ //using pop(ulation) instead of data
 			console.log('Population')
             // circle options
             let circleOptions = {
-                radius:  10,
+                radius:  8,
 				//radius: getRadiusSize(item['Population']),
                 weight: 1,
                 color: 'white',
@@ -247,8 +319,6 @@ function getRadiusSize(value){
     perpixel = max/10;
     return value/perpixel
 }
-
-
 
 function panToImage(index){
 	map.setZoom(4);
