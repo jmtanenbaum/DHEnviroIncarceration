@@ -85,14 +85,14 @@ function refillLayers() {
 	brew.classify('quantiles');
 
 	// create the layer and add to map
-	gwPolys = L.geoJson(enviroShape, {	
-		onEachFeature: onEachFeature,	
-		style: gwStyle //call a function to style each feature
+	gwPolys = L.geoJson(enviroShape, {
+		style: gwStyle, //call a function to style each feature
+		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
 	pollPolys = L.geoJson(enviroShape, {
-		onEachFeature: onEachFeature,	
-		style: pollStyle //call a function to style each feature
+		style: pollStyle, //call a function to style each feature
+		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
 	//remove from map
@@ -157,7 +157,6 @@ function shapesLoaded() {
 
 	}
 }
-
 //create legend
 function createLegend(){
 	legend.onAdd = function (map) {
@@ -184,7 +183,7 @@ function createLegend(){
 }
 
 // Function that defines what will happen on user interactions with each feature
-function onEachFeature(feature, layer) {
+function onEachFeature(_feature, layer) {
 	layer.on({
 		mouseover: highlightFeature,
 		mouseout: resetHighlight,
@@ -233,12 +232,13 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${properties.name}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+			this._div.innerHTML = `<b>${"Hazardousness"}</b><br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
+			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}`;
 		}
 		// if feature is not highlighted
 		else
 		{
-			this._div.innerHTML = 'Hover over a California environmental tract';
+			this._div.innerHTML = 'Hover over a California region or neighborhood for the hazardousness percentile';
 		}
 	};
 
