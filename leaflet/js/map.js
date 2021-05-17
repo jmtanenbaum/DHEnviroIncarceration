@@ -7,8 +7,12 @@ let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTg
 let enviroShapePath = "https://raw.githubusercontent.com/jmtanenbaum/DHEnviroIncarceration/main/leaflet/data/CES3Results.json";
 let markers = L.featureGroup();
 let markersLayer = L.featureGroup();
+<<<<<<< HEAD
 let legend = L.control({position: 'topright'}); //legend object
 let info_panel = L.control();
+=======
+let legend = L.control({position: 'bottomleft'});
+>>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
 let prisondata;
 let brew = new classyBrew();
 //create layergroups
@@ -106,11 +110,15 @@ function refillLayers() {
 	//layer controls
 	toggleLayers = L.control.layers(null,layers).addTo(map);
 
+<<<<<<< HEAD
 	// create the legend
 	createLegend();
 	// create the infopanel
 	createInfoPanel();
 
+=======
+	createLegend();
+>>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
 }
 
 function gwStyle(feature){
@@ -119,7 +127,7 @@ function gwStyle(feature){
 		weight: 1,
 		fill: true,
 		fillColor: brew.getColorInRange(feature.properties["GW_pctl"]),
-		fillOpacity: 0.8
+		fillOpacity: 0.5
 	}
 }
 
@@ -129,7 +137,7 @@ function pollStyle(feature){
 		weight: 1,
 		fill: true,
 		fillColor: brew.getColorInRange(feature.properties["Poll_pctl"]),
-		fillOpacity: 0.8
+		fillOpacity: 0.5
 	}
 }
 
@@ -154,7 +162,15 @@ function shapesLoaded() {
 
 	}
 }
+<<<<<<< HEAD
 //create legend
+=======
+
+//sidebar poly buttons
+
+
+// legend settings
+>>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
