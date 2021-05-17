@@ -58,6 +58,16 @@ body {
 	overflow: auto;
 }
 
+.sidebar-item {
+	padding: 10px; 
+    background: rgb(185, 29, 29); 
+    border: 1px solid rgb(34, 34, 34); 
+    margin: 5px; 
+	border-radius: 12px;
+		cursor: pointer; 
+	transition-duration: 0.4s;
+}
+
 .content {
 	padding:5px;
 	grid-area: content;
