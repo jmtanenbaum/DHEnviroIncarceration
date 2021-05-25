@@ -7,19 +7,15 @@ let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_4ZPtBXvaVqamLlQTg
 let enviroShapePath = "https://raw.githubusercontent.com/jmtanenbaum/DHEnviroIncarceration/main/leaflet/data/CES3Results.json";
 let markers = L.featureGroup();
 let markersLayer = L.featureGroup();
-<<<<<<< HEAD
 let legend = L.control({position: 'topright'}); //legend object
 let info_panel = L.control();
-=======
-let legend = L.control({position: 'bottomleft'});
->>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
 let prisondata;
 let brew = new classyBrew();
 //create layergroups
 let prisonMarkers = L.layerGroup();
 let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
-let pollPolys; //pollution polygons
-let gwPolys; //groundwater polygons
+let polys; //polygons layer
+
 
 
 
@@ -62,25 +58,22 @@ function readCSV(path){
 }
 
 //classybrew function
-function refillLayers() {
+function refillLayers(fields) {
 	// clear layers in case it has been mapped already
-	if (gwPolys){
-		gwPolys.clearLayers()
+	if (polys){
+		polys.clearLayers()
 	}
-	if (pollPolys){
-		pollPolys.clearLayers()
-	}
+
+	console.log(fields)
 	
 	// create an empty array
 	let values = [];
 
 	// based on the provided field, enter each value into the array
 	enviroShape.features.forEach(function(item,index){
-		values.push(item.properties["GW_pctl"])
+		values.push(item.properties[fields])
 	})
-	enviroShape.features.forEach(function(item,index){
-		values.push(item.properties["Poll_pctl"])
-	})
+	
 
 	// set up the "brew" options
 	brew.setSeries(values);
@@ -88,57 +81,30 @@ function refillLayers() {
 	brew.setColorCode('YlOrRd');
 	brew.classify('quantiles');
 
-	// create the layer and add to map
-	gwPolys = L.geoJson(enviroShape, {
-		style: gwStyle //call a function to style each feature
-	}).addTo(map);
+	function polyStyle(feature){
+		return {
+			stroke: true,
+			weight: 1,
+			fill: true,
+			fillColor: brew.getColorInRange(feature.properties[fields]),
+			fillOpacity: 0.5
+		}
+	}
 
-	pollPolys = L.geoJson(enviroShape, {
-		style: pollStyle //call a function to style each feature
+	// create the layer and add to map
+	polys = L.geoJson(enviroShape, {
+		style: polyStyle //call a function to style each feature
 	}).addTo(map);
 
 	//remove from map
-	toggleLayers.remove();
+	prisonMarkers.remove();
+	prisonMarkers.addTo(map);
 
-	//create layers
-	let layers = {
-		"Prison Locations": prisonMarkers, 
-		"Groundwater Threats": gwPolys,
-		"Pollution": pollPolys
-	}
-
-	//layer controls
-	toggleLayers = L.control.layers(null,layers).addTo(map);
-
-<<<<<<< HEAD
 	// create the legend
 	createLegend();
 	// create the infopanel
 	createInfoPanel();
 
-=======
-	createLegend();
->>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
-}
-
-function gwStyle(feature){
-	return {
-		stroke: true,
-		weight: 1,
-		fill: true,
-		fillColor: brew.getColorInRange(feature.properties["GW_pctl"]),
-		fillOpacity: 0.5
-	}
-}
-
-function pollStyle(feature){
-	return {
-		stroke: true,
-		weight: 1,
-		fill: true,
-		fillColor: brew.getColorInRange(feature.properties["Poll_pctl"]),
-		fillOpacity: 0.5
-	}
 }
 
 //load up the choropleth layers
@@ -146,31 +112,12 @@ function shapesLoaded() {
 	//when file is ready, read it 
 	if (this.readyState == 4 && this.status == "200") { //check file is good 
 		enviroShape = JSON.parse(this.responseText); //convert file into js
-		
-		//create layers
-		let layers = {
-		}
-
-		//layer controls
-		toggleLayers = L.control.layers(null,layers);
-		toggleLayers.addTo(map)
-
 		//add layergroups to map 
 		prisonMarkers.addTo(map)
 
-		refillLayers()
-
 	}
 }
-<<<<<<< HEAD
 //create legend
-=======
-
-//sidebar poly buttons
-
-
-// legend settings
->>>>>>> 70751ff38ddadb24d3287af832d684c275b76822
 function createLegend(){
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
@@ -196,7 +143,7 @@ function createLegend(){
 }
 
 // Function that defines what will happen on user interactions with each feature
-function onEachFeature(feature, layer) {
+function onEachFeature(_feature, layer) {
 	layer.on({
 		mouseover: highlightFeature,
 		mouseout: resetHighlight,
