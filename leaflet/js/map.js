@@ -93,7 +93,8 @@ function refillLayers(fields) {
 
 	// create the layer and add to map
 	polys = L.geoJson(enviroShape, {
-		style: polyStyle //call a function to style each feature
+		style: polyStyle, //call a function to style each feature
+		onEachFeature: onEachFeature // actions on each feature
 	}).addTo(map);
 
 	//remove from map
@@ -175,11 +176,6 @@ function resetHighlight(e) {
 	info_panel.update() // resets infopanel
 }
 
-function resetHighlight(e) {
-	gwPolys.resetStyle(e.target);
-	info_panel.update() // resets infopanel
-}
-
 // on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
@@ -197,12 +193,13 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${properties.name}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+			this._div.innerHTML = `<b>${"Hazardousness"}</b><br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
+			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}`;
 		}
 		// if feature is not highlighted
 		else
 		{
-			this._div.innerHTML = 'Hover over a California environmental tract';
+			this._div.innerHTML = 'Hover over a California region or neighborhood for the hazardousness percentile';
 		}
 	};
 
