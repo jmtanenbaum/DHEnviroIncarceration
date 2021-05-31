@@ -15,8 +15,9 @@ let brew = new classyBrew();
 let prisonMarkers = L.layerGroup();
 let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
 let polys; //polygons layer
-
-
+let pollPolys;
+let geojson_layer;
+let target;
 
 
 // initialize
