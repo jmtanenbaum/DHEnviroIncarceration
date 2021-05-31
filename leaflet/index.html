@@ -20,6 +20,16 @@
 
 	<!-- classy brew -->
 	<script src="js/classybrew.js"></script>
+
+	<!-- apex charts -->
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+	<!-- js-grid -->
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+	
+
 	
 </head>
 <body>
@@ -27,19 +37,11 @@
 			
 	<div id="side-bar" class="sidebar">
 		<!--SEARCH BAR STUFF-->
-		<div class="search_bar"> <!--add search bar-->
-			<form action="#">
-				<input type="text" 
-					name="search" 
-					value="search" 
-					placeholder="Search Prisons">
-				<button>
-					<span class="fa fa-search"
-					style="font-size: 18px;">
-					</span>
-				</button>
-			</form>
-		</div>
+		<div class = "search-container">
+            <input type="text" id = "searchbox" placeholder="Search for a Prison Location">
+            <button onclick="prisonSearch();"><i class="fa fa-search"></i></button>
+        </div>
+		
 		<!--END SEARCH BAR STUFF-->
 		
 		<p> 
@@ -49,8 +51,11 @@
 		Years later, scholarly research and investigative journalism confirm 
 		that mass incarceration continues to fuel environmental injustice across 
 		the state of California by concentrating pollution and toxic waste in 
-		marginalized communities. While the state and federal Environmental 
-		Protection Agency theoretically protect citizens from living near 
+		marginalized communities.
+		</p>
+		<p>
+		While the state and federal Environmental Protection Agency theoretically 
+		protect citizens from living near 
 		environmental hazards and monitor prisons and jails for violations of 
 		environmental law, organizations like the Prison Ecology Project argue 
 		that they fail to adequately protect incarcerated people and surrounding 
@@ -61,14 +66,14 @@
 		</p>
 		<p>
 		Select a black dot to learn more about that prison, jail, or 
-		detention center. Click the layers icon on the top right corner to 
-		view the groundwater threats and pollution layers. The darker the color is, 
+		detention center. Click the a button below to 
+		view the different layers of groundwater threats, pollution, hazardous materials, and toxic releases. The darker the color is, 
 		the more polluted the area is. Use the search bar on the top left to 
 		search for a facility, and click the names of the featured facilities 
 		on the search bar to learn more about the pollution threats 
 		emanating from these sites. 
 		</p>
-		<div class="sidebar-item" onclick="refillLayers('GW_pctl')">Ground Water Threats</div>
+		<div class="sidebar-item" onclick="refillLayers('GW_pctl')">Groundwater Threats</div>
 		<div class="sidebar-item" onclick="refillLayers('Poll_pctl')">Pollution</div>
 		<div class="sidebar-item" onclick="refillLayers('Haz_pctl')">Hazardous Materials</div>
 		<div class="sidebar-item" onclick="refillLayers('TR_pctl')">Toxic Releases</div>	
@@ -77,8 +82,11 @@
 	<div class="content">
 		<div id="map"></div>
 	</div>
+
+	<div class="dashboard"></div>
 	
 	<script src="js/map.js"></script>
+	<script src="js/searchbar.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 body,html {
-	margin:5;
+	margin:0;
 	height:100%;
 	width:100%;
 }
@@ -10,33 +10,74 @@ body,html {
 
 body {
 	display: grid;
-	grid-template-rows: 850px 1fr;
+	grid-template-rows: 400px 1fr 500px;
 	grid-template-columns: 350px 1fr;
 	grid-template-areas: 
 	"sidebar content"
-    "search bar";
+  "dashboard dashboard";
 }
+
+sidebar .search-container {
+	grid-area: sidebar;
+    padding: 5px;
+    background-color:rgb(185, 29, 29);
+	border-radius: 30px;
+  }
+  
+  .search-container input {
+	position:relative;
+    left:0%;
+    top:25%;
+    width:75%;
+    background-color:white;
+    color:grey;
+    border-radius: 20px;
+    padding:2%;
+  }
+  
+  .search-container button {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	background-color: rgb(255, 255, 255);
+	border: none;
+	border-radius: 50px;
+  }
+  
+  .search-container button{
+	background-color: hsl(0, 0%, 27%);
+    color: #f2f2f2;
+    float:none;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border-radius: 10px;
+    border:orange;
+    cursor: pointer;
+  }
 
 /* SEARCH BAR STUFF*/
-.search_bar {
+/*sidebar .search_bar {
     grid-area: sidebar;
     padding: 5px;
-    background-color:rosybrown;
+    background-color:rgb(185, 29, 29);
+	border-radius: 30px;
 }
 
-.search_bar input[type="text"] {
+/*.search_bar input[type="text"] {
     position:relative;
     left:0%;
     top:25%;
-    width:60%;
+    width:75%;
     background-color:white;
     color:grey;
     border-radius: 20px;
     padding:2%;
 }
 
-.search_bar button{
-    background-color: hsl(0, 0%, 27%);
+/*.search_bar button{
+    background-color: hsl(0, 0%, 100%);
     color: #f2f2f2;
     float:none;
     padding: 5px 10px;
@@ -51,11 +92,13 @@ body {
 
 
 .sidebar {
-	color: white;
+	color: rgb(255, 255, 255);
 	grid-area: sidebar;
 	padding:10px;
 	background-color: #555;
 	overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 12px;
 }
 
 .sidebar-item {
@@ -71,6 +114,8 @@ body {
 .content {
 	padding:5px;
 	grid-area: content;
+  border-radius: 12px;
+  border-color: #111;
 }
 
 /* legend styles */
@@ -105,4 +150,17 @@ body {
     border: 1px solid #333;
     padding: 10px;
     background-color: #111;
+}
+
+.dashboard {
+  grid-area: dashboard;
+  color: rgb(0, 0, 0);
+	padding:5px;
+  border-radius: 12px;
+	background-color: rgb(0, 0, 0);
+	overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  :rgb(194, 20, 20)
+
+}
 }

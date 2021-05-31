@@ -35,6 +35,8 @@ function createMap(lat,lon,zl){
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
+
+	
 }
 
 // function to read csv data
@@ -48,7 +50,7 @@ function readCSV(path){
 			prisondata = data;
 
 			//get prison population and put in global variable
-			prisonpop = prisondata.meta.fields[prisondata.meta.fields.length-10];
+			prisonpop = prisondata.meta.fields[prisondata.meta.fields.length-14];
 
             //call map
 			mapCSV(prisonpop);
@@ -91,6 +93,8 @@ function refillLayers(fields) {
 		}
 	}
 
+
+
 	// create the layer and add to map
 	polys = L.geoJson(enviroShape, {
 		style: polyStyle, //call a function to style each feature
@@ -105,6 +109,11 @@ function refillLayers(fields) {
 	createLegend();
 	// create the infopanel
 	createInfoPanel();
+
+	//create table
+	createTable();
+
+
 
 }
 
@@ -168,7 +177,97 @@ function highlightFeature(e) {
 	}
 
 	info_panel.update(layer.feature.properties)
+
+	//createDashboard(layer.feature.properties) //on mouseover dashboard will report
 }
+
+//function to add dashboard -- WORK ON THIS!!
+function createDashboard(properties){
+
+	var options = {
+		series: [{
+		name: 'series1',
+		data: [31, 40, 28, 51, 42, 109, 100]
+	  }, {
+		name: 'series2',
+		data: [11, 32, 45, 32, 34, 52, 41]
+	  }],
+		chart: {
+		height: 350,
+		type: 'area'
+	  },
+	  dataLabels: {
+		enabled: false
+	  },
+	  stroke: {
+		curve: 'smooth'
+	  },
+	  xaxis: {
+		type: 'datetime',
+		categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+	  },
+	  tooltip: {
+		x: {
+		  format: 'dd/MM/yy HH:mm'
+		},
+	  },
+	  };
+
+	  var chart = new ApexCharts(document.querySelector("#chart"), options);
+	  chart.render();
+	
+}
+
+function createTable(){
+	// empty array for our data
+	let datafortable = [];
+
+	// loop through the data and add the properties object to the array
+	enviroShape.features.forEach(function(item){
+		datafortable.push(item.geometry)
+	})	
+	
+	// array to define the fields: each object is a column
+	let fields = [
+		{ name: "California Region", type: "text"},
+		{ name: 'Groundwater Threat', type: 'number'},
+		{ name: 'Pollution', type: 'number'},
+		{ name: 'Hazardous Materials', type: 'number'},
+		{ name: 'Toxic Releases', type: 'number'},
+	]
+ 
+	// create the table in our dash
+	$(".dashboard").jsGrid({
+		width: "100%",
+		height: "400px",
+		
+		editing: true,
+		sorting: true,
+		paging: true,
+		autoload: true,
+ 
+		pageSize: 10,
+		pageButtonCount: 5,
+ 
+		data: datafortable,
+		fields: fields,
+		rowClick: function(args) { 
+			console.log(args);
+			zoomTo(args.item.coordinates)
+		},
+	});
+
+}
+
+function zoomTo(Polygon){
+
+	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.geometry.Polygon === coordinates)
+
+	map.fitBounds(zoom2poly[0].getBounds())
+
+}
+
+
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
@@ -224,11 +323,9 @@ function mapCSV(pop){ //using pop(ulation) instead of data
     
     //clear layers in case calling more than once
     markers.clearLayers();
-    console.log(prisondata)
     //loop
     prisondata.data.forEach(function(item,index){
         if(item.Latitude != undefined){
-			console.log('Population')
             // circle options
             let circleOptions = {
                 radius:  8,
@@ -286,3 +383,4 @@ function panToImage(index){
 	map.panTo(markers.getLayers()[index]._latlng);
 	map.openPopup(marker)
 }
+
