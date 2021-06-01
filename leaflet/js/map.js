@@ -222,34 +222,33 @@ function createDashboard(properties){
 function createTable(){
 	// empty array for our data
 	let datafortable = [];
-
 	// loop through the data and add the properties object to the array
 	enviroShape.features.forEach(function(item){
-		datafortable.push(item.geometry)
+		// yk: should be item.properties, not item.geography
+		datafortable.push(item.properties)
 	})	
-	
+	console.log(datafortable)
 	// array to define the fields: each object is a column
 	let fields = [
-		{ name: "California Region", type: "text"},
-		{ name: 'Groundwater Threat', type: 'number'},
-		{ name: 'Pollution', type: 'number'},
-		{ name: 'Hazardous Materials', type: 'number'},
-		{ name: 'Toxic Releases', type: 'number'},
+		// yk: name needs to correspond to the field name in the data. 
+		// You can use "title" to specify a user friendly text to display
+		{ name: "County", type: "text"},
+		{ name: 'City', type: 'text'},
+		{ name: 'PollutionS', title: 'Pollution', type: 'text'},
+		{ name: 'Groundwate', title: 'Groundwater', type: 'number'},
+		{ name: 'Haz_Waste', title: 'Hazardous Materials', type: 'number'},
+		{ name: 'Tox_Releas', title: 'Toxic Releases', type: 'number'},
 	]
- 
 	// create the table in our dash
 	$(".dashboard").jsGrid({
 		width: "100%",
 		height: "400px",
-		
 		editing: true,
 		sorting: true,
 		paging: true,
 		autoload: true,
- 
 		pageSize: 10,
 		pageButtonCount: 5,
- 
 		data: datafortable,
 		fields: fields,
 		rowClick: function(args) { 
@@ -257,7 +256,6 @@ function createTable(){
 			zoomTo(args.item.coordinates)
 		},
 	});
-
 }
 
 function zoomTo(Polygon){
