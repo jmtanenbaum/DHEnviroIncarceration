@@ -297,8 +297,8 @@ function createInfoPanel(){
 		if(properties){
 			this._div.innerHTML = `<b>${"Hazardousness"}</b><br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
 			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}
-			<br>${"Hazardous Materials percentile"}: ${properties["Haz_Waste"]}
-			<br>${"Toxic Releases percentile"}: ${properties["Tox_Releas"]}`;
+			<br>${"Hazardous Materials percentile"}: ${properties["Haz_pctl"]}
+			<br>${"Toxic Releases percentile"}: ${properties["TR_pctl"]}`;
 		}
 		// if feature is not highlighted
 		else
