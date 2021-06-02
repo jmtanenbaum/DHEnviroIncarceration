@@ -234,6 +234,7 @@ function createTable(){
 		// You can use "title" to specify a user friendly text to display
 		{ name: "County", type: "text"},
 		{ name: 'City', type: 'text'},
+		{ name: 'ZIP', type: 'number'},
 		{ name: 'PollutionS', title: 'Pollution', type: 'text'},
 		{ name: 'Groundwate', title: 'Groundwater', type: 'number'},
 		{ name: 'Haz_Waste', title: 'Hazardous Materials', type: 'number'},
@@ -260,7 +261,7 @@ function createTable(){
 
 function zoomTo(Polygon){
 
-	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.geometry.Polygon === coordinates)
+	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.geometry.Polygon === Polygon)
 
 	map.fitBounds(zoom2poly[0].getBounds())
 
@@ -292,7 +293,9 @@ function createInfoPanel(){
 		// if feature is highlighted
 		if(properties){
 			this._div.innerHTML = `<b>${"Hazardousness"}</b><br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
-			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}`;
+			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}
+			<br>${"Hazardous Materials percentile"}: ${properties["Haz_Waste"]}
+			<br>${"Toxic Releases percentile"}: ${properties["Tox_Releas"]}`;
 		}
 		// if feature is not highlighted
 		else
