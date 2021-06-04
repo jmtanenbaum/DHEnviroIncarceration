@@ -331,3 +331,37 @@ function panToImage(index){
 	map.openPopup(marker)
 }
 
+//function prisonSearch (){
+//	searchTerm = $('#searchbox').val()
+//	console.log(searchTerm)
+//}
+
+function prisonSearch (){
+	//add variable to help function search specific columns of Prison data
+	var fuse = new Fuse(prisondata.features, {
+		keys: [
+			'properties."County / Name of Facility"',
+			'properties.city',
+		]
+	})
+
+	L.control.search({
+		layer: prisondata,
+		propertyName: 'name',
+		filterData: function(text, records) {
+			var jsons = fuse.search(text),
+				ret = {}, key;
+			
+			for(var i in jsons) {
+				key = jsons[i].properties.name;
+				ret[ key ]= records[key];
+			}
+
+			console.log(jsons,ret);
+			return ret;
+		}
+	})
+	.on('search:locationfound', function(e) {
+		e.layer.openPopup();
+	})
+	.addTo(map);}
