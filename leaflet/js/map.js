@@ -35,9 +35,6 @@ function createMap(lat,lon,zl){
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
-	
-	L.Control.geocoder().addTo(map); //add control search geocoder to map
-
 
 	
 }
@@ -176,8 +173,6 @@ function highlightFeature(e) {
 	}
 
 	info_panel.update(layer.feature.properties)
-
-	//createDashboard(layer.feature.properties) //on mouseover dashboard will report
 }
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
@@ -189,44 +184,6 @@ function resetHighlight(e) {
 // on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
-}
-
-//function to add dashboard -- WORK ON THIS!!
-function createDashboard(properties){
-
-	var options = {
-		series: [{
-		name: 'series1',
-		data: [31, 40, 28, 51, 42, 109, 100]
-	  }, {
-		name: 'series2',
-		data: [11, 32, 45, 32, 34, 52, 41]
-	  }],
-		chart: {
-		height: 350,
-		type: 'area'
-	  },
-	  dataLabels: {
-		enabled: false
-	  },
-	  stroke: {
-		curve: 'smooth'
-	  },
-	  xaxis: {
-		type: 'datetime',
-		categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-	  },
-	  tooltip: {
-		x: {
-		  format: 'dd/MM/yy HH:mm'
-		},
-	  },
-	  };
-
-	  var chart = new ApexCharts(document.querySelector("#chart"), options);
-	  chart.render();
-	
-	
 }
 
 function createTable(){
@@ -245,10 +202,10 @@ function createTable(){
 		{ name: "County", type: "text"},
 		{ name: 'City', type: 'text'},
 		{ name: 'ZIP', type: 'number'},
-		{ name: 'PollutionS', title: 'Pollution', type: 'text'},
-		{ name: 'Groundwate', title: 'Groundwater', type: 'number'},
+		{ name: 'PM_2_5_Pct', title: 'PM 2.5 Pollution', type: 'text'},
+		{ name: 'GW_pctl', title: 'Groundwater', type: 'number'},
 		{ name: 'Haz_Waste', title: 'Hazardous Materials', type: 'number'},
-		{ name: 'Tox_Releas', title: 'Toxic Releases', type: 'number'},
+		{ name: 'TR_pctl', title: 'Toxic Releases', type: 'number'},
 	]
 	// create the table in our dash
 	$(".dashboard").jsGrid({
@@ -289,9 +246,11 @@ function createInfoPanel(){
 	info_panel.update = function (properties) {
 		// if feature is highlighted
 		if(properties){
-			this._div.innerHTML = `<b>${"Hazardousness"}</b><br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
-			<br>${"Pollution percentile"}: ${properties["Poll_pctl"]}
-			<br>${"Hazardous Materials percentile"}: ${properties["Haz_pctl"]}
+			this._div.innerHTML = `<b>${"Hazardousness"}</b>
+			<br>${"City & ZIP Code"}: ${properties["City"]}, ${properties["ZIP"]}
+			<br>${"Groundwater percentile"}: ${properties["GW_pctl"]}
+			<br>${"Pollution percentile"}: ${properties["PM_2_5_Pct"]}
+			<br>${"Hazardous Materials percentile"}: ${properties["Haz_Waste"]}
 			<br>${"Toxic Releases percentile"}: ${properties["TR_pctl"]}`;
 		}
 		// if feature is not highlighted
@@ -325,13 +284,21 @@ function mapCSV(pop){ //using pop(ulation) instead of data
     //loop
     prisondata.data.forEach(function(item,index){
         if(item.Latitude != undefined){
+
+			if (parseInt(item['number of violations']) >0){
+				fillcolor = 'red'
+			}
+			else {
+				fillcolor = 'black'
+			} 
+
             // circle options
             let circleOptions = {
                 radius:  8,
 				//radius: getRadiusSize(item['Population']),
                 weight: 1,
                 color: 'white',
-                fillColor: 'black',
+                fillColor: fillcolor,
                 fillOpacity: 0.75
             }
         
@@ -355,25 +322,6 @@ function mapCSV(pop){ //using pop(ulation) instead of data
 
     // fit map to markers 
     map.fitBounds(markers.getBounds())  
-}
-
-//function to adjust radius size of markers according to popsize, doesn't appear to have any impact
-function getRadiusSize(value){
-
-    let values = [];
-
-    // get the min and max
-    prisondata.data.forEach(function(item,index){
-        if(item[prisonpop] != undefined){
-            values.push(Number(item[prisonpop]))
-        }
-    })
-    let min = Math.min(...values);
-    let max = Math.max(...values)
-    
-    // per pixel if 100 pixel is the max range
-    perpixel = max/10;
-    return value/perpixel
 }
 
 function panToImage(index){
