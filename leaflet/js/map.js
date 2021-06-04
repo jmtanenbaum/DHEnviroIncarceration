@@ -263,16 +263,16 @@ function createTable(){
 		data: datafortable,
 		fields: fields,
 		rowClick: function(args) { 
-			console.log(args);
-			zoomTo(args.item.coordinates)
+			console.log(args.item.Shape_Area);
+			zoomTo(args.item.Shape_Area)
 		},
 	});
 }
 
-function zoomTo(Polygon){
+function zoomTo(area){
 
-	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.geometry.Polygon === Polygon)
-
+	let zoom2poly = polys.getLayers().filter(item => item.feature.properties.Shape_Area === area)
+	
 	map.fitBounds(zoom2poly[0].getBounds())
 
 }
