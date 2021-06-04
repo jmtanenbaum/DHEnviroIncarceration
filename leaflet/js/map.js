@@ -15,7 +15,6 @@ let brew = new classyBrew();
 let prisonMarkers = L.layerGroup();
 let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
 let polys; //polygons layer
-let pollPolys;
 let geojson_layer;
 let target;
 
@@ -97,8 +96,6 @@ function refillLayers(fields) {
 		}
 	}
 
-
-
 	// create the layer and add to map
 	polys = L.geoJson(enviroShape, {
 		style: polyStyle, //call a function to style each feature
@@ -116,8 +113,6 @@ function refillLayers(fields) {
 
 	//create table
 	createTable();
-
-
 
 }
 
@@ -185,6 +180,17 @@ function highlightFeature(e) {
 	//createDashboard(layer.feature.properties) //on mouseover dashboard will report
 }
 
+// on mouse out, reset the style, otherwise, it will remain highlighted
+function resetHighlight(e) {
+	polys.resetStyle(e.target);
+	info_panel.update() // resets infopanel
+}
+
+// on mouse click on a feature, zoom in to it
+function zoomToFeature(e) {
+	map.fitBounds(e.target.getBounds());
+}
+
 //function to add dashboard -- WORK ON THIS!!
 function createDashboard(properties){
 
@@ -219,6 +225,7 @@ function createDashboard(properties){
 
 	  var chart = new ApexCharts(document.querySelector("#chart"), options);
 	  chart.render();
+	
 	
 }
 
@@ -268,19 +275,6 @@ function zoomTo(Polygon){
 
 	map.fitBounds(zoom2poly[0].getBounds())
 
-}
-
-
-
-// on mouse out, reset the style, otherwise, it will remain highlighted
-function resetHighlight(e) {
-	pollPolys.resetStyle(e.target);
-	info_panel.update() // resets infopanel
-}
-
-// on mouse click on a feature, zoom in to it
-function zoomToFeature(e) {
-	map.fitBounds(e.target.getBounds());
 }
 
 function createInfoPanel(){
