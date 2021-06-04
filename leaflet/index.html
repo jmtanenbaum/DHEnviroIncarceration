@@ -11,9 +11,6 @@
 	<!-- leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	
-	<!--Leaflet control search plugin-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -70,14 +67,14 @@
 		<p>
 		Select a black dot to learn more about that prison, jail, or 
 		detention center. Click the a button below to 
-		view the different layers of groundwater threats, pollution, hazardous materials, and toxic releases. The darker the color is, 
+		view the different layers of groundwater threats from leaking underground storage sites, particle matter air pollution (especially PM2.5), presence of hazardous waste facilities and generators, and the concentration of toxic releases from facility emissions and incineration. The darker the color is, 
 		the more polluted the area is. Use the search bar on the top left to 
 		search for a facility, and click the names of the featured facilities 
 		on the search bar to learn more about the pollution threats 
 		emanating from these sites. 
 		</p>
 		<div class="sidebar-item" onclick="refillLayers('GW_pctl')">Groundwater Threats</div>
-		<div class="sidebar-item" onclick="refillLayers('Poll_pctl')">Pollution</div>
+		<div class="sidebar-item" onclick="refillLayers('PM_2_5_Pct')">Pollution</div>
 		<div class="sidebar-item" onclick="refillLayers('Haz_pctl')">Hazardous Materials</div>
 		<div class="sidebar-item" onclick="refillLayers('TR_pctl')">Toxic Releases</div>	
 		
@@ -89,8 +86,6 @@
 	<div class="dashboard"></div>
 	
 	<script src="js/map.js"></script>
-	<script src="js/searchbar.js"></script>
-	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> <!-- Leaflet control search plugin >
-
+	
 </body>
 </html>
