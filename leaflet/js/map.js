@@ -17,6 +17,7 @@ let prisonpop; //TO CHANGE MARKER SIZE ACC TO PRISON POPULATION
 let polys; //polygons layer
 let geojson_layer;
 let target;
+let dataforchart;
 
 
 // initialize
@@ -365,3 +366,67 @@ function prisonSearch (){
 		e.layer.openPopup();
 	})
 	.addTo(map);}
+	
+	//function createDashboard(properties){
+
+		// clear dashboard
+	//	$('.dashboard').empty();
+	//	let dataforchart = [];
+		// loop through the data and add the properties object to the array
+		//enviroShape.features.forEach(function(item){
+			// yk: should be item.properties, not item.geography
+		//	dataforchart.push(item.properties)
+	//	})	
+		//console.log(properties)
+	
+		// chart title
+	//	let title = 'Toxic Releases Percentiles';
+	
+		// data values
+	//	let data = [];
+	
+		// data fields
+	//	let fields = [
+			// yk: name needs to correspond to the field name in the data. 
+			// You can use "title" to specify a user friendly text to display
+		//	{ name: "County", type: "text"},
+		//	{ name: 'City', type: 'text'},
+		//	{ name: 'ZIP', type: 'number'},
+		//	{ name: 'PM_2_5_Pct', title: 'PM 2.5 Pollution', type: 'text'},
+		//	{ name: 'GW_pctl', title: 'Groundwater', type: 'number'},
+		//	{ name: 'Haz_Waste', title: 'Hazardous Materials', type: 'number'},
+		//	{ name: 'TR_pctl', title: 'Toxic Releases', type: 'number'},
+	
+		// set chart options
+	//	let options = {
+	//		chart: {
+	//			type: 'bar',
+	//			height: 300,
+	//			animations: {
+	//				enabled: true,
+	//			}
+	//		},
+	//		title: {
+	//			text: title,
+	//		},
+	//		plotOptions: {
+	//			bar: {
+	//				horizontal: true
+	//			}
+	//		},
+	//		series: [
+		//		{
+		//			data: data
+		//		}
+		//	],
+		//	xaxis: {
+		//		categories: fields
+		//	}
+	//	}
+		
+		// create the chart
+	//	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
+	//	chart.render()
+//	}
+	
+	
