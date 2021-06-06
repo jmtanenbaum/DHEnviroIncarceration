@@ -305,7 +305,7 @@ function mapCSV(pop){ //using pop(ulation) instead of data
         // marker create
         let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
         .on('mouseover',function(){
-            this.bindPopup(`${item['County / Name of Facility']>} <br> Prison
+            this.bindPopup(`${item['County / Name of Facility']} <br> Prison
             ${pop}: ${item['Population']} <br> Number of CA Water Board Violations:  ${item['number of violations']} <br> Types of Violations: ${item['types']} <br> Dates: ${item['dates']} <br> Description: ${item['description']}`).openPopup()
         })
 
