@@ -15,7 +15,11 @@
 	<!-- FUZZY CONTROL SEARCH-->
 	<link rel="stylesheet" href="css/leaflet-search.css" />
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
-	<script src="js/leaflet-search.js"></script>
+	<script src="js/leaflet-search.js"></script> 
+
+	<!--Leaflet control search plugin-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -41,12 +45,12 @@
 			
 	<div id="side-bar" class="sidebar">
 		<!--SEARCH BAR STUFF-->
-		<div class = "search-container">
+		<!---- <div class = "search-container">
             <input type="text" id = "searchbox" placeholder="Search for a Prison Location">
             <button onclick="prisonSearch();"><i class="fa fa-search"></i></button>
         </div>
 		
-		<!--END SEARCH BAR STUFF-->
+		END SEARCH BAR STUFF-->
 		
 		<p> 
 		Select a black or red dot to learn more about that prison, jail, or 
@@ -73,9 +77,10 @@
 	
 	<script src="js/map.js"></script>
 
-	<!-- FUZZY CONTROL SEARCH-->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
-	<script src="../src/leaflet-search.js"></script>
+
+	<!--GEOCODER IN MAP SEARCH-->
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
 	
 </body>
 </html>

@@ -9,6 +9,7 @@ body,html {
 }
 
 body {
+	background: linear-gradient(rgb(10, 70, 57), rgb(15, 73, 15));
 	display: grid;
 	grid-template-rows: 600px 1fr 300px;
 	grid-template-columns: 350px 1fr;
@@ -17,7 +18,7 @@ body {
   "dashboard dashboard";
 }
 
-sidebar .search-container {
+/* sidebar .search-container {
 	grid-area: sidebar;
     padding: 5px;
     background-color:rgb(168, 86, 86);
@@ -59,7 +60,7 @@ sidebar .search-container {
     box-shadow:  1px 1px 10px rgba(167, 101, 3, 0.2);
 	  background-color: hsl(75, 5%, 50%);
 	  cursor: pointer;
-  }
+  } */
 
 .sidebar {
 	color: rgb(255, 255, 255);
@@ -124,7 +125,7 @@ sidebar .search-container {
 }
 
 .map-item {
-    border: 1px solid #333;
+    border: 12px solid #333;
     padding: 10px;
     background-color: #111;
 }
@@ -135,7 +136,7 @@ sidebar .search-container {
   color: rgb(0, 0, 0);
 	padding:5px;
   border-radius: 12px;
-	background-color: rgb(0, 0, 0);
+	background: linear-gradient(rgb(15, 73, 15), rgb(3, 51, 41));
 	overflow: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   :rgb(194, 20, 20)

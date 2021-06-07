@@ -37,6 +37,9 @@ function createMap(lat,lon,zl){
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
+	L.Control.geocoder().addTo(map); //add control search geocoder to map
+
+
 	
 }
 
@@ -59,6 +62,59 @@ function readCSV(path){
 		}
 	});
 }
+
+//function setUpFuzzySearch(){
+
+//	var restLayers = L.geoJson(prisondata, {
+//		pointToLayer: function(feature, latlng) {
+
+//			var props = L.Util.extend({
+//						'name': ''
+//					},feature.properties),
+//				textPopup = L.Util.template("<h3>{name}</h3>", props), // TODO change this
+//				style = {
+//					radius: 5,
+//					opacity: 0.8,
+//					fillColor: '#ddd',
+//					fillOpacity: 0.8
+//				};
+//
+//			return L.circleMarker(latlng, style).bindPopup(textPopup);
+//		}
+//	}).addTo(map);
+
+
+	//add variable to help function search specific columns of Prison data
+	//var fuse = new Fuse(prisondata_geojson.features, {
+//		keys: [
+//			'properties."County / Name of Facility"',
+//			'properties.city',
+//		]
+//	})
+
+	//L.control.search({
+//		layer: prisondata,
+//		propertyName: 'name',
+//		filterData: function(text, records) {
+//			var jsons = fuse.search(text),
+//				ret = {}, key;
+//			
+//			for(var i in jsons) {
+//				key = jsons[i].properties.name;
+//				ret[ key ]= records[key];
+//			}
+//
+//			console.log(jsons,ret);
+//			return ret;
+//		}
+//	})
+//	.on('search:locationfound', function(e) {
+//		e.layer.openPopup();
+//	})
+//	.addTo(map);
+//}
+
+
 
 //classybrew function
 function refillLayers(fields) {
@@ -331,41 +387,38 @@ function panToImage(index){
 	map.openPopup(marker)
 }
 
-//function prisonSearch (){
-//	searchTerm = $('#searchbox').val()
-//	console.log(searchTerm)
+// Load the prisondata_geojson data.
+//function loadPrisonGeoJSON(){
+	//for code to interact with file on server
+//    var xmlobj = new XMLHttpRequest();
+
+	//prepare file from server to be read
+ //   xmlobj.open('GET', prisonGeoJsonPath, true); 
+
+	// when the webpage is ready, call prisonDataGeoJSONLoaded
+ //   xmlobj.onreadystatechange = prisonDataGeoJSONLoaded;
+
+  //  xmlobj.send();  //sends request
 //}
 
-function prisonSearch (){
-	//add variable to help function search specific columns of Prison data
-	var fuse = new Fuse(prisondata.features, {
-		keys: [
-			'properties."County / Name of Facility"',
-			'properties.city',
-		]
-	})
-
-	L.control.search({
-		layer: prisondata,
-		propertyName: 'name',
-		filterData: function(text, records) {
-			var jsons = fuse.search(text),
-				ret = {}, key;
-			
-			for(var i in jsons) {
-				key = jsons[i].properties.name;
-				ret[ key ]= records[key];
-			}
-
-			console.log(jsons,ret);
-			return ret;
-		}
-	})
-	.on('search:locationfound', function(e) {
-		e.layer.openPopup();
-	})
-	.addTo(map);
+// Callback for loading prison data GeoJSON
+function prisonDataGeoJSONLoaded() {
+	//when file is ready, read it 
+	if (this.readyState == 4 && this.status == "200") { //check file is good 
+		prisondata_geojson = JSON.parse(this.responseText); //convert file into js
+		setUpFuzzySearch();
+	}
 }
+
+
+
+
+//function prisonSearch (){
+	//searchTerm = $('#searchbox').val()
+//	console.log(searchTerm)
+//	L.Control.geocoder().addTo('#searchbox'); //add control search geocoder to map
+
+//}
 
 	
 	
