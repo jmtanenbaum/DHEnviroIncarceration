@@ -1,0 +1,1643 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5559541,37.40409595 ]
+    },
+    "properties": {
+    "Unique ID":1,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"ATWATER UNITED STATES PENITENTIARY",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"946",
+    "Address":"",
+    "Zipcode":null,
+    "City":"ATWATER",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.1231018,35.97394934 ]
+    },
+    "properties": {
+    "Unique ID":2,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"AVENAL STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4204",
+    "Address":"1 KINGS WAY",
+    "Zipcode":93204,
+    "City":"AVENAL",
+    "County":"KINGS",
+    "County FIPS Code":6031,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000826,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.4021356,34.00704974 ]
+    },
+    "properties": {
+    "Unique ID":3,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"BEHAVIORAL SYSTEMS SOUTHWEST RUBIDOUX",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.4722393,34.21927863 ]
+    },
+    "properties": {
+    "Unique ID":4,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"BEHAVIORAL SYSTEMS SOUTHWEST VAN NUYS",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.5328039,32.979598 ]
+    },
+    "properties": {
+    "Unique ID":5,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"BRAWLEY RRC",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"BRAWLEY",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.8588801,35.1532512 ]
+    },
+    "properties": {
+    "Unique ID":6,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA CITY CORRECTIONAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2424",
+    "Address":"22844 VIRGINIA BLVD",
+    "Zipcode":93505,
+    "City":"CALIFORNIA CITY",
+    "County":"KERN",
+    "County FIPS Code":6029,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000852,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5167302,40.40195801 ]
+    },
+    "properties": {
+    "Unique ID":7,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA CORRECTIONAL CENTER",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4049",
+    "Address":"711-045 CENTER ROAD",
+    "Zipcode":96127,
+    "City":"SUSANVILLE",
+    "County":"LASSEN",
+    "County FIPS Code":6035,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000773,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.5703307,35.10991489 ]
+    },
+    "properties": {
+    "Unique ID":8,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA CORRECTIONAL INSTITUTION",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3696",
+    "Address":"24900 HWY 202",
+    "Zipcode":93561,
+    "City":"TEHACHAPI",
+    "County":"KERN",
+    "County FIPS Code":6029,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10001530,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1848441,37.8947278 ]
+    },
+    "properties": {
+    "Unique ID":9,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA HEALTH CARE FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2849",
+    "Address":"7707 AUSTIN ROAD",
+    "Zipcode":95215,
+    "City":"STOCKTON",
+    "County":"SAN JOAQUIN",
+    "County FIPS Code":6077,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000799,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.6823919,33.98471223 ]
+    },
+    "properties": {
+    "Unique ID":10,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA INSTITUTION FOR MEN",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3627",
+    "Address":"14901 CENTRAL AVENUE",
+    "Zipcode":91710,
+    "City":"CHINO",
+    "County":"SAN BERNARDINO",
+    "County FIPS Code":6071,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000836,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.636365,33.94974531 ]
+    },
+    "properties": {
+    "Unique ID":11,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA INSTITUTION FOR WOMEN",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"1619",
+    "Address":"16756 CHINO-CORONA ROAD",
+    "Zipcode":92880,
+    "City":"CORONA",
+    "County":"SAN BERNARDINO",
+    "County FIPS Code":6071,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002341,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.9791645,38.32851019 ]
+    },
+    "properties": {
+    "Unique ID":12,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA MEDICAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2512",
+    "Address":"1600 CALIFORNIA DRIVE",
+    "Zipcode":95696,
+    "City":"VACAVILLE",
+    "County":"SOLANO",
+    "County FIPS Code":6095,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000785,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.6989005,35.32457413 ]
+    },
+    "properties": {
+    "Unique ID":13,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA MENS COLONY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3758",
+    "Address":"COLONY DRIVE",
+    "Zipcode":93409,
+    "City":"SAN LUIS OBISPO",
+    "County":"SAN LUIS OBISPO",
+    "County FIPS Code":6079,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002345,
+    "ICE FIELD OFFICE":"",
+    "number of violations":116,
+    "types":"Sanitary Sewer Overflow/Spill/",
+    "dates":"1999-2004",
+    "description":"Prison administrators at the California Men’s Colony dumped 220,00 gallons of raw sewage into Morro Bay in 2004. Even after the prison’s wastewater treatment plant was upgraded, the prison continued to spill sewage into the Bay and was fined by state water officials in 2008 and 2014. Spills continued in 2015 and January of 2016. City records recorded 450 documented spills in the previous five years – one quarter of which were attributed to CMC. Some of the effluent flowed into nearby Morro Bay, a protected wildlife sanctuary."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.5759442,33.92691794 ]
+    },
+    "properties": {
+    "Unique ID":14,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA REHABILITATION CENTER",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3802",
+    "Address":"3195 WESTERN AVENUE",
+    "Zipcode":92860,
+    "City":"NORCO",
+    "County":"RIVERSIDE",
+    "County FIPS Code":6065,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000856,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.549121,36.06081823 ]
+    },
+    "properties": {
+    "Unique ID":15,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA STATE PRISON CORCORAN",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3043",
+    "Address":"4001 KING AVENUE",
+    "Zipcode":93212,
+    "City":"CORCORAN",
+    "County":"KINGS",
+    "County FIPS Code":6031,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000824,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.2276136,34.69359649 ]
+    },
+    "properties": {
+    "Unique ID":16,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA STATE PRISON LOS ANGELES",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3218",
+    "Address":"44750 60TH STREET WEST",
+    "Zipcode":93536,
+    "City":"LANCASTER",
+    "County":"LOS ANGELES",
+    "County FIPS Code":6037,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002353,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1539037,38.69444411 ]
+    },
+    "properties": {
+    "Unique ID":17,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA STATE PRISON SACRAMENTO",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2354",
+    "Address":"100 PRISON ROAD",
+    "Zipcode":95671,
+    "City":"REPRESA",
+    "County":"SACRAMENTO",
+    "County FIPS Code":6067,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002322,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4903665,37.94003982 ]
+    },
+    "properties": {
+    "Unique ID":18,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA STATE PRISON SAN QUENTIN",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4032",
+    "Address":"MAIN STREET",
+    "Zipcode":94964,
+    "City":"SAN QUENTIN",
+    "County":"MARIN",
+    "County FIPS Code":6041,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000790,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.9752369,38.32077652 ]
+    },
+    "properties": {
+    "Unique ID":19,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIFORNIA STATE PRISON SOLANO",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4306",
+    "Address":"2100 PEABODY ROAD",
+    "Zipcode":95687,
+    "City":"VACAVILLE",
+    "County":"SOLANO",
+    "County FIPS Code":6095,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002323,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.484344,33.16569337 ]
+    },
+    "properties": {
+    "Unique ID":20,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CALIPATRIA STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3109",
+    "Address":"7018 BLAIR ROAD",
+    "Zipcode":92233,
+    "City":"CALIPATRIA",
+    "County":"IMPERIAL",
+    "County FIPS Code":6025,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002347,
+    "ICE FIELD OFFICE":"",
+    "number of violations":3,
+    "types":"Sanitary Sewer Overflow/Spill",
+    "dates":"8/21/2000, 04/07/2004",
+    "description":"Calipatria was fined for wastewater overflowing from prison sewers."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.7890555,32.82339731 ]
+    },
+    "properties": {
+    "Unique ID":22,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CENTINELA STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3475",
+    "Address":"2302 BROWN ROAD",
+    "Zipcode":92251,
+    "City":"IMPERIAL",
+    "County":"IMPERIAL",
+    "County FIPS Code":6025,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002348,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.1527098,37.09368073 ]
+    },
+    "properties": {
+    "Unique ID":23,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CENTRAL CALIFORNIA WOMENS FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2814",
+    "Address":"23370 ROAD 22",
+    "Zipcode":93610,
+    "City":"CHOWCHILLA",
+    "County":"MADERA",
+    "County FIPS Code":6039,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000801,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.9095058,33.56257951 ]
+    },
+    "properties": {
+    "Unique ID":24,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CHUCKAWALLA VALLEY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2773",
+    "Address":"19025 WILEY'S WELL ROAD",
+    "Zipcode":92225,
+    "City":"BLYTHE",
+    "County":"RIVERSIDE",
+    "County FIPS Code":6065,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002346,
+    "ICE FIELD OFFICE":"",
+    "number of violations":64,
+    "types":"Effluent",
+    "dates":"9/1/2000 - 9/1/2004",
+    "description":"There is a history of illegal levels of arsenic contamination, and unhealthy levels of forms of radium. "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.118324,32.70062927 ]
+    },
+    "properties": {
+    "Unique ID":25,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"CORRECTIONAL ALTERNATIVES INC RRC SAN DIEGO",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.3822324,36.46964789 ]
+    },
+    "properties": {
+    "Unique ID":26,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"CORRECTIONAL TRAINING FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"5063",
+    "Address":"SOLEDAD PRISON ROAD",
+    "Zipcode":93960,
+    "City":"SOLEDAD",
+    "County":"MONTEREY",
+    "County FIPS Code":6053,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000817,
+    "ICE FIELD OFFICE":"",
+    "number of violations":64,
+    "types":"Effluent",
+    "dates":"01/07/2000 - 12/04/2012",
+    "description":"A New York Times investigation found unhealthy radiation alpha particle activity. "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.3306264,37.74805759 ]
+    },
+    "properties": {
+    "Unique ID":27,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"DEUEL VOCATIONAL INSTITUTION",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2052",
+    "Address":"23500 KASSON ROAD",
+    "Zipcode":95304,
+    "City":"TRACY",
+    "County":"SAN JOAQUIN",
+    "County FIPS Code":6077,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000794,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.896971,37.71857929 ]
+    },
+    "properties": {
+    "Unique ID":28,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"DUBLIN FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1019",
+    "Address":"5701 8TH STREET",
+    "Zipcode":94568,
+    "City":"DUBLIN",
+    "County":"ALAMEDA",
+    "County FIPS Code":6001,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10005303,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1630324,38.69538339 ]
+    },
+    "properties": {
+    "Unique ID":29,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"FOLSOM STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2871",
+    "Address":"300 PRISON ROAD",
+    "Zipcode":95671,
+    "City":"REPRESA",
+    "County":"SACRAMENTO",
+    "County FIPS Code":6067,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000780,
+    "ICE FIELD OFFICE":"",
+    "number of violations":1,
+    "types":"Effluent",
+    "dates":"2000",
+    "description":" Built in 1880, the decrepit Folsom State Prison is infamous for spilling 700,000 gallons of toxic waste into the nearby American River and receiving a $700,000 fine from the EPA. "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.0176159,34.07466808 ]
+    },
+    "properties": {
+    "Unique ID":31,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"GEO CARE EL MONTE",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.4974335,38.5829489 ]
+    },
+    "properties": {
+    "Unique ID":32,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"GEO CARE LLC RCC SACRAMENTO",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"7000 FRANKLIN BOULEVARD",
+    "Zipcode":95823,
+    "City":"SACRAMENTO",
+    "County":"",
+    "County FIPS Code":6067,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.253033,37.81685485 ]
+    },
+    "properties": {
+    "Unique ID":33,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"GEO REENTRY OF ALASKA INC RRC OAKLAND",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":2020,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.410953,37.78360154 ]
+    },
+    "properties": {
+    "Unique ID":35,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"GEO TAYLOR ST FACILITY RRC",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":null,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.1625205,40.19448484 ]
+    },
+    "properties": {
+    "Unique ID":37,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"HERLONG FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"960",
+    "Address":"741-925 ACCESS ROAD A-25",
+    "Zipcode":96113,
+    "City":"HERLONG",
+    "County":"LASSEN",
+    "County FIPS Code":6035,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000772,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5258579,40.4034569 ]
+    },
+    "properties": {
+    "Unique ID":39,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"HIGH DESERT STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3161",
+    "Address":"475-750 RICE CANYON ROAD",
+    "Zipcode":96127,
+    "City":"SUSANVILLE",
+    "County":"LASSEN",
+    "County FIPS Code":6035,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002310,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.9260354,33.56098104 ]
+    },
+    "properties": {
+    "Unique ID":40,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"IRONWOOD STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2896",
+    "Address":"19005 WILEY'S WELL ROAD",
+    "Zipcode":92225,
+    "City":"BLYTHE",
+    "County":"RIVERSIDE",
+    "County FIPS Code":6065,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000861,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.3253627,35.76647437 ]
+    },
+    "properties": {
+    "Unique ID":41,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"KERN VALLEY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3551",
+    "Address":"3000 WEST CECIL AVENUE",
+    "Zipcode":93216,
+    "City":"DELANO",
+    "County":"KERN",
+    "County FIPS Code":6029,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000844,
+    "ICE FIELD OFFICE":"",
+    "number of violations":1,
+    "types":"Effluent",
+    "dates":"2005",
+    "description":"Kern Valley State Prison opened in 2005, but soon after state agencies found that drinking water given to incarcerated people contained deadly amounts of known carcinogen arsenic. "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.4994621,34.67675537 ]
+    },
+    "properties": {
+    "Unique ID":42,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"LOMPOC FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1257",
+    "Address":"3600 GUARD RD",
+    "Zipcode":93436,
+    "City":"LOMPOC",
+    "County":"SANTA BARBARA",
+    "County FIPS Code":6083,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000863,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5054801,34.67918746 ]
+    },
+    "properties": {
+    "Unique ID":43,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"LOMPOC UNITED STATES PENITENTIARY",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"947",
+    "Address":"3901 KLEIN BLVD",
+    "Zipcode":93436,
+    "City":"LOMPOC",
+    "County":"SANTA BARBARA",
+    "County FIPS Code":6083,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000864,
+    "ICE FIELD OFFICE":"",
+    "number of violations":556,
+    "types":"Effluent",
+    "dates":"07/22/2013 - 07/22/2013",
+    "description":"Lompoc had illegal levels of arsenic and lead and unhealthy levels of manganese and multiple forms of radiation."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.2321,34.0591 ]
+    },
+    "properties": {
+    "Unique ID":44,
+    "Facility":"county",
+    "State":"California",
+    "County / Name of Facility":"LOS ANGELES JAILS",
+    "Source":"https://lasd.org/covid19updates/",
+    "Population":"17076",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":6037,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.238468,34.0536306 ]
+    },
+    "properties": {
+    "Unique ID":45,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"LOS ANGELES MTROPOLITAN DETENTION CENTER",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"713",
+    "Address":"535 NORTH ALAMEDA STREET",
+    "Zipcode":90012,
+    "City":"LOS ANGELES",
+    "County":"LOS ANGELES",
+    "County FIPS Code":6037,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000892,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.3923429,36.73210543 ]
+    },
+    "properties": {
+    "Unique ID":46,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"MENDOTA FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"890",
+    "Address":"33500 WEST CALIFORNIA AVE",
+    "Zipcode":93640,
+    "City":"MENDOTA",
+    "County":"FRESNO",
+    "County FIPS Code":6019,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10006179,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.9534458,38.37074335 ]
+    },
+    "properties": {
+    "Unique ID":47,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"MULE CREEK STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4007",
+    "Address":"4001 STATE HIGHWAY 104",
+    "Zipcode":95640,
+    "City":"IONE",
+    "County":"AMADOR",
+    "County FIPS Code":6005,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000782,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1978212,37.8911829 ]
+    },
+    "properties": {
+    "Unique ID":48,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"NA CHADERJIAN YOUTH CORRECTIONAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"216",
+    "Address":"7650 SOUTH NEWCASTLE ROAD",
+    "Zipcode":95215,
+    "City":"STOCKTON",
+    "County":"SAN JOAQUIN",
+    "County FIPS Code":6077,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000796,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.3098757,35.78188512 ]
+    },
+    "properties": {
+    "Unique ID":50,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"NORTH KERN STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4355",
+    "Address":"2737 WEST CECIL AVENUE",
+    "Zipcode":93215,
+    "City":"DELANO",
+    "County":"KERN",
+    "County FIPS Code":6029,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000841,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1978213,37.8911829 ]
+    },
+    "properties": {
+    "Unique ID":51,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"NORTHERN CALIFORNIA YOUTH CORRECTIONAL CENTER",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"216",
+    "Address":"7650 SOUTH NEWCASTLE ROAD",
+    "Zipcode":95215,
+    "City":"STOCKTON",
+    "County":"SAN JOAQUIN",
+    "County FIPS Code":6077,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000796,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.1976947,37.89852126 ]
+    },
+    "properties": {
+    "Unique ID":52,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"OH CLOSE YOUTH CORRECTIONAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"169",
+    "Address":"7650 SOUTH NEWCASTLE ROAD",
+    "Zipcode":95213,
+    "City":"STOCKTON",
+    "County":"SAN JOAQUIN",
+    "County FIPS Code":6077,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000793,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.8774523,33.7489556 ]
+    },
+    "properties": {
+    "Unique ID":53,
+    "Facility":"county",
+    "State":"California",
+    "County / Name of Facility":"ORANGE COUNTY JAILS",
+    "Source":"https://ocsheriff.gov/about-ocsd/covid-19/covid-19-oc-jails",
+    "Population":"5074",
+    "Address":"550 N FLOWER ST",
+    "Zipcode":92702,
+    "City":"SANTA ANA",
+    "County":"ORANGE",
+    "County FIPS Code":6059,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -124.1490751,41.85480851 ]
+    },
+    "properties": {
+    "Unique ID":54,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"PELICAN BAY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2648",
+    "Address":"5905 LAKE EARL DRIVE",
+    "Zipcode":95531,
+    "City":"CRESCENT CITY",
+    "County":"DEL NORTE",
+    "County FIPS Code":6015,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10002309,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.6398069,38.41156697 ]
+    },
+    "properties": {
+    "Unique ID":55,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"PINE GROVE JUVENILE PRISON CAMP",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"-",
+    "Address":"13630 AQUEDUCT-VOLCANO ROAD",
+    "Zipcode":95665,
+    "City":"PINE GROVE",
+    "County":"AMADOR",
+    "County FIPS Code":6005,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.2488996,36.13147309 ]
+    },
+    "properties": {
+    "Unique ID":56,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"PLEASANT VALLEY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3131",
+    "Address":"24863 WEST JAYNE AVENUE",
+    "Zipcode":93210,
+    "City":"COALINGA",
+    "County":"FRESNO",
+    "County FIPS Code":6019,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000810,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.3279067,38.2890255 ]
+    },
+    "properties": {
+    "Unique ID":57,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"RICHARD A MCGEE CORRECTIONAL TRAINING CENTER",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"-",
+    "Address":"9850 TWIN CITIES RD",
+    "Zipcode":95632,
+    "City":"GALT",
+    "County":"",
+    "County FIPS Code":6067,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.9335763,32.58456487 ]
+    },
+    "properties": {
+    "Unique ID":58,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"RJ DONOVAN CORRECTIONAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"3845",
+    "Address":"480 ALTA ROAD",
+    "Zipcode":92179,
+    "City":"SAN DIEGO",
+    "County":"SAN DIEGO",
+    "County FIPS Code":6073,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000869,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.3743944,36.47885699 ]
+    },
+    "properties": {
+    "Unique ID":59,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"SALINAS VALLEY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2917",
+    "Address":"31625 HIGHWAY 101",
+    "Zipcode":93960,
+    "City":"SOLEDAD",
+    "County":"MONTEREY",
+    "County FIPS Code":6053,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000821,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.1650276,32.71411271 ]
+    },
+    "properties": {
+    "Unique ID":60,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"SAN DIEGO METROPOLITAN CORRECTIONAL CENTER",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"702",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000871,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5365401,37.89168856 ]
+    },
+    "properties": {
+    "Unique ID":61,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"SIERRA CONSERVATION CENTER",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4393",
+    "Address":"5100 OBYRNES FERRY ROAD",
+    "Zipcode":95327,
+    "City":"JAMESTOWN",
+    "County":"TUOLUMNE",
+    "County FIPS Code":6109,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10001522,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.5478,36.05396 ]
+    },
+    "properties": {
+    "Unique ID":62,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"SUBSTANCE ABUSE TREATMENT FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"5291",
+    "Address":"900 QUEBEC AVE",
+    "Zipcode":93212,
+    "City":"CORCORAN",
+    "County":"KINGS",
+    "County FIPS Code":6031,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000825,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.2670631,33.726491 ]
+    },
+    "properties": {
+    "Unique ID":63,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"TERMINAL ISLAND FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1185",
+    "Address":"1299 SEASIDE AVENUE",
+    "Zipcode":90731,
+    "City":"SAN PEDRO",
+    "County":"LOS ANGELES",
+    "County FIPS Code":6037,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000887,
+    "ICE FIELD OFFICE":"",
+    "number of violations":1,
+    "types":"Effluent",
+    "dates":"04/28/2005",
+    "description":"Unknown contaminants"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.1554719,37.10547736 ]
+    },
+    "properties": {
+    "Unique ID":64,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"VALLEY STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"2999",
+    "Address":"21633 AVENUE 24",
+    "Zipcode":93610,
+    "City":"CHOWCHILLA",
+    "County":"MADERA",
+    "County FIPS Code":6039,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000802,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.1060622,34.24325318 ]
+    },
+    "properties": {
+    "Unique ID":65,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"VENTURA YOUTH CORRECTIONAL FACILITY",
+    "Source":"https://www.cdcr.ca.gov/covid19/cdcr-cchcs-covid-19-status/",
+    "Population":"-",
+    "Address":"",
+    "Zipcode":null,
+    "City":"",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":null,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.3648013,34.56765503 ]
+    },
+    "properties": {
+    "Unique ID":66,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"VICTORVILLE MEDIUM I FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1169",
+    "Address":"",
+    "Zipcode":null,
+    "City":"VICTORVILLE",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000832,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.3583145,34.56848411 ]
+    },
+    "properties": {
+    "Unique ID":67,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"VICTORVILLE MEDIUM II FEDERAL CORRECTIONAL INSTITUTION",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1216",
+    "Address":"13777 AIR EXPRESSWAY BOULEVARD",
+    "Zipcode":92394,
+    "City":"VICTORVILLE",
+    "County":"SAN BERNARDINO",
+    "County FIPS Code":6071,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000831,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.3617935,34.57139384 ]
+    },
+    "properties": {
+    "Unique ID":68,
+    "Facility":"federal",
+    "State":"California",
+    "County / Name of Facility":"VICTORVILLE UNITED STATES PENITENTIARY",
+    "Source":"https://www.bop.gov/coronavirus/",
+    "Population":"1090",
+    "Address":"",
+    "Zipcode":null,
+    "City":"VICTORVILLE",
+    "County":"",
+    "County FIPS Code":null,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000830,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.4083319,35.59431189 ]
+    },
+    "properties": {
+    "Unique ID":69,
+    "Facility":"state",
+    "State":"California",
+    "County / Name of Facility":"WASCO STATE PRISON",
+    "Source":"https://www.cdcr.ca.gov/covid19/updates/",
+    "Population":"4588",
+    "Address":"701 SCOFIELD AVENUE",
+    "Zipcode":93280,
+    "City":"WASCO",
+    "County":"KERN",
+    "County FIPS Code":6029,
+    "HIFLD ID\n(matches to HIFLD dataset - Homeland Infrastructure Foundation-Level Data)":10000847,
+    "ICE FIELD OFFICE":"",
+    "number of violations":0,
+    "types":"",
+    "dates":"",
+    "description":""
+    }
+  }
+]
+}
