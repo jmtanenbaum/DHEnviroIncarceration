@@ -259,8 +259,8 @@ function createTable(){
 		{ name: "County", type: "text"},
 		{ name: 'City', type: 'text'},
 		{ name: 'ZIP', type: 'number'},
-		{ name: 'PM_2_5_Pct', title: 'PM 2.5 Pollution', type: 'text'},
 		{ name: 'GW_pctl', title: 'Groundwater', type: 'number'},
+		{ name: 'PM_2_5_Pct', title: 'PM 2.5 Pollution', type: 'text'},
 		{ name: 'Haz_Waste', title: 'Hazardous Materials', type: 'number'},
 		{ name: 'TR_pctl', title: 'Toxic Releases', type: 'number'},
 	]
